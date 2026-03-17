@@ -108,3 +108,150 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
 }, {threshold:0.08, rootMargin:'0px 0px -32px 0px'});
 document.querySelectorAll('.reveal, .stagger').forEach(el => observer.observe(el));
+
+/* ═══════════════════════════════════════════════════════
+   FLEET SLIDESHOW — Add this block inside script.js
+   (or paste at the bottom of your existing script.js)
+
+   Also works standalone — just make sure it runs after DOM load.
+   ═══════════════════════════════════════════════════════ */
+
+(function initFleetSlideshows() {
+  const WA_NUMBER = '919092432647';
+
+  document.querySelectorAll('.fleet-cat-card').forEach(card => {
+    const ss      = card.querySelector('.fcc-slideshow');
+    const slides  = card.querySelectorAll('.fcc-slide');
+    const track   = card.querySelector('.fcc-slides');
+    const dotsWrap= card.querySelector('.fcc-dots');
+    const prevBtn = card.querySelector('.fcc-prev');
+    const nextBtn = card.querySelector('.fcc-next');
+    const bookBtn = card.querySelector('.fcc-book-btn');
+
+    let current = 0;
+    let autoTimer = null;
+    const total = slides.length;
+
+    /* Build dots */
+    slides.forEach((_, i) => {
+      const d = document.createElement('button');
+      d.className = 'fcc-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', `Go to slide ${i + 1}`);
+      d.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(d);
+    });
+
+    function goTo(idx) {
+      slides[current].classList.remove('active');
+      dotsWrap.children[current].classList.remove('active');
+      current = (idx + total) % total;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      slides[current].classList.add('active');
+      dotsWrap.children[current].classList.add('active');
+    }
+
+    function startAuto() {
+      stopAuto();
+      autoTimer = setInterval(() => goTo(current + 1), 3200);
+    }
+    function stopAuto() {
+      if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+    }
+
+    prevBtn.addEventListener('click', () => { goTo(current - 1); startAuto(); });
+    nextBtn.addEventListener('click', () => { goTo(current + 1); startAuto(); });
+
+    ss.addEventListener('mouseenter', stopAuto);
+    ss.addEventListener('mouseleave', startAuto);
+
+    /* Touch / swipe support */
+    let touchX = 0;
+    ss.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+    ss.addEventListener('touchend',   e => {
+      const dx = e.changedTouches[0].clientX - touchX;
+      if (Math.abs(dx) > 40) { dx < 0 ? goTo(current + 1) : goTo(current - 1); startAuto(); }
+    }, { passive: true });
+
+    startAuto();
+
+    /* WhatsApp booking */
+    if (bookBtn) {
+      bookBtn.addEventListener('click', e => {
+        e.preventDefault();
+        const vehicle = bookBtn.dataset.v || 'a vehicle';
+        const msg = encodeURIComponent(
+          `Hi Super J Travels! I'd like to book ${vehicle}. Please share availability and pricing.`
+        );
+        window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank');
+      });
+    }
+  });
+})();
+/* ═══════════════════════════════════════════════════════════════
+   FLEET SLIDESHOW JS — paste at bottom of script.js
+   ═══════════════════════════════════════════════════════════════ */
+
+(function initFleetSlideshows() {
+  const WA = '919092432647';
+
+  document.querySelectorAll('.fleet-cat-card').forEach(card => {
+    const wrap   = card.querySelector('.fcc-slideshow');
+    const strip  = card.querySelector('.fcc-slides');
+    const slides = card.querySelectorAll('.fcc-slide');
+    const dotsEl = card.querySelector('.fcc-dots');
+    const prev   = card.querySelector('.fcc-prev');
+    const next   = card.querySelector('.fcc-next');
+    const bookBtn= card.querySelector('.fcc-book-btn');
+
+    let cur = 0, timer = null;
+    const total = slides.length;
+
+    /* Build dots */
+    slides.forEach((_, i) => {
+      const d = document.createElement('button');
+      d.className = 'fcc-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'Slide ' + (i + 1));
+      d.addEventListener('click', () => { go(i); resetAuto(); });
+      dotsEl.appendChild(d);
+    });
+
+    function go(idx) {
+      dotsEl.children[cur].classList.remove('active');
+      cur = (idx + total) % total;
+      strip.style.transform = `translateX(-${cur * 100}%)`;
+      dotsEl.children[cur].classList.add('active');
+    }
+
+    function resetAuto() {
+      clearInterval(timer);
+      timer = setInterval(() => go(cur + 1), 3500);
+    }
+
+    prev.addEventListener('click', () => { go(cur - 1); resetAuto(); });
+    next.addEventListener('click', () => { go(cur + 1); resetAuto(); });
+
+    /* Pause on hover */
+    wrap.addEventListener('mouseenter', () => clearInterval(timer));
+    wrap.addEventListener('mouseleave', resetAuto);
+
+    /* Touch swipe */
+    let tx = 0;
+    wrap.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+    wrap.addEventListener('touchend',   e => {
+      const dx = e.changedTouches[0].clientX - tx;
+      if (Math.abs(dx) > 40) { dx < 0 ? go(cur + 1) : go(cur - 1); resetAuto(); }
+    }, { passive: true });
+
+    resetAuto();
+
+    /* WhatsApp booking */
+    if (bookBtn) {
+      bookBtn.addEventListener('click', e => {
+        e.preventDefault();
+        const v   = bookBtn.dataset.v || 'a vehicle';
+        const msg = encodeURIComponent(`Hi Super J Travels! I'd like to book ${v}. Please share availability and pricing. Thank you!`);
+        window.open(`https://wa.me/${WA}?text=${msg}`, '_blank');
+      });
+    }
+  });
+})();
