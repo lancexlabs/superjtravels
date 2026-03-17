@@ -726,7 +726,7 @@ select.form-input{cursor:pointer}
 .fcc-next { right: 10px; }
 
 /* ── Dots ── */
-.fcc-dots {
+.fcc-dots{
   position: absolute;
   bottom: 10px;
   right: 12px;              /* sits to the right so it doesn't clash with vehicle name */
