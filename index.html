@@ -7,7 +7,8 @@
 <meta name="description" content="Super J Travels offers reliable 24/7 cab and taxi services in Chennai, Tamil Nadu. Book outstation cabs, airport transfers, pilgrimage trips to Tirupati & Rameswaram, wedding cars, and corporate rentals. Call +91 90924 32647."/>
 <meta name="keywords" content="cab service Chennai, taxi service Chennai, outstation cab Chennai, airport transfer Chennai, Tirupati cab from Chennai, Rameswaram cab, Chennai to Bangalore cab, Innova Crysta hire Chennai, corporate cab Chennai, Super J Travels, cabs Tamil Nadu, 24/7 taxi Chennai"/>
 <meta name="author" content="Super J Travels, Chennai"/>
-<link rel="icon" href="https://github.com/lancexlabs/superjtravels/blob/main/images/logo.jpeg?raw=true" type="image/x-icon" style="width: 300px; height: auto;">
+<link rel="icon" href="images/logo.png" type="image/x-icon">
+
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://superjtravels.in/"/>
 <meta property="og:type" content="website"/>
@@ -68,14 +69,13 @@
 <header class="navbar" id="navbar">
   <div class="container nav-inner">
     <a href="#home" class="nav-logo">
-          <img src="https://github.com/lancexlabs/superjtravels/blob/main/images/logo.jpeg?raw=true" alt=""> <div> <strong>Super J Travels</strong><span>Cabs &amp; Taxi Service</span></div>
-      
+     <img src="images/logo.png" alt=""> <div> <strong>Super J Travels</strong><span>Cabs &amp; Taxi Service</span></div>
     </a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="#services"     class="nav-link">Services</a>
       <a href="#fleet"        class="nav-link">Fleet</a>
       <a href="#routes"       class="nav-link">Routes</a>
-      <a href="#testimonials" class="nav-link">Reviews</a>
+      <a href="reviews.html" class="nav-link">Reviews</a>
       <a href="#contact"      class="nav-link">Contact</a>
     </nav>
     <a href="#" class="btn btn-blue" id="navWa">📞 Book Now</a>
@@ -89,7 +89,7 @@
   <a href="#services"     onclick="closeMenu()">Services</a>
   <a href="#fleet"        onclick="closeMenu()">Fleet</a>
   <a href="#routes"       onclick="closeMenu()">Routes</a>
-  <a href="#testimonials" onclick="closeMenu()">Reviews</a>
+  <a href="reviews.html" onclick="closeMenu()">Reviews</a>
   <a href="#contact"      onclick="closeMenu()">Contact</a>
   <a href="#" class="btn btn-blue btn-full" id="mobileWa">💬 Book on WhatsApp</a>
 </div>
@@ -105,7 +105,7 @@
       <p class="hero-sub">Premium outstation cabs, airport transfers, pilgrimage trips &amp; corporate rentals across Tamil Nadu. Available 24/7 — book in 2 minutes via WhatsApp.</p>
       <div class="hero-actions">
         <a href="#" class="btn btn-amber btn-lg" id="heroWa">💬 Book on WhatsApp</a>
-        <a href="tel:+919092432647" class="btn btn-ghost-white btn-lg">📞 +91 90924 32647</a>
+        <a href="tel:+919092432647" class="btn btn-ghost-white btn-lg">📞 +91 90924 32647 </a>
       </div>
       <div class="hero-stats">
         <div class="stat"><span class="stat-val">5000+</span><span class="stat-lbl">Happy Riders</span></div>
@@ -114,12 +114,13 @@
         <div class="stat"><span class="stat-val">100+</span><span class="stat-lbl">Vehicle Types</span></div>
       </div>
     </div>
+    <!-- inline booking card -->
     <aside class="hero-card" aria-label="Quick booking form">
       <div class="hero-card-title">Quick Booking</div>
-      <input id="hcName"    type="text" class="hc-input" placeholder="Your Name"       autocomplete="name"/>
-      <input id="hcPhone"   type="tel"  class="hc-input" placeholder="Mobile Number"   autocomplete="tel"/>
-      <input id="hcPickup"  type="text" class="hc-input" placeholder="Pickup Location"/>
-      <input id="hcDrop"    type="text" class="hc-input" placeholder="Drop Location"/>
+      <input id="hcName"   type="text" class="hc-input" placeholder="Your Name"       autocomplete="name"/>
+      <input id="hcPhone"  type="tel"  class="hc-input" placeholder="Mobile Number"   autocomplete="tel"/>
+      <input id="hcPickup" type="text" class="hc-input" placeholder="Pickup Location"/>
+      <input id="hcDrop"   type="text" class="hc-input" placeholder="Drop Location"/>
       <select id="hcVehicle" class="hc-input">
         <option value="">Select Vehicle</option>
         <option>Swift Dzire (4 Seater)</option>
@@ -158,7 +159,7 @@
         <div class="sec-head">
           <span class="sec-label">What We Do</span>
           <h2 class="sec-title" id="svc-heading">Every Trip,<br><em>Perfectly</em> Handled</h2>
-          <p class="sec-sub svc-sidebar-text">From outstation cabs to luxury wedding fleets — Super J Travels covers every kind of journey across Tamil Nadu and South India.</p>
+          <p class="sec-sub svc-sidebar-text">From  outstation cabs to luxury wedding fleets — Super J Travels covers every kind of journey across Tamil Nadu and South India.</p>
         </div>
         <a href="#" class="btn btn-blue" id="svcWa">💬 Book Any Service</a>
       </div>
@@ -174,7 +175,9 @@
   </div>
 </section>
 
-<!-- FLEET -->
+<!-- ── FLEET SECTION – Drop-in replacement ── -->
+<!-- Paste this entire block in place of the existing <section id="fleet"> -->
+
 <section class="section sec-alt" id="fleet" aria-labelledby="fleet-heading">
   <div class="container">
     <div class="sec-head center reveal">
@@ -182,43 +185,91 @@
       <h2 class="sec-title" id="fleet-heading">Choose Your <mark>Ride</mark></h2>
       <p class="sec-sub">Well-maintained, sanitized vehicles for every group size and budget across Tamil Nadu.</p>
     </div>
+
     <div class="fleet-cat-grid stagger">
 
-      <!-- SEDAN -->
+      <!-- ── SEDAN ── -->
       <div class="fleet-cat-card">
         <div class="fcc-slideshow" data-index="0">
           <div class="fcc-slides">
-            <div class="fcc-slide active"><img src="https://images.overdrive.in/wp-content/uploads/2013/05/Toyota-Etios.jpg" alt="Toyota Etios" loading="lazy"/><span class="fcc-slide-name">Toyota Etios</span></div>
-            <div class="fcc-slide"><img src="https://www.carbike360.com/_next/image?url=https%3A%2F%2Fs3.ap-south-1.amazonaws.com%2Fcb360static%2Fuploads%2F93915ea9-f81f-41bb-9972-b286be448b48-small-New%2520Project%2520-%25202025-01-16T161103.598.webp&w=3840&q=75" alt="Maruti Swift Dzire" loading="lazy"/><span class="fcc-slide-name">Maruti Swift Dzire</span></div>
-            <div class="fcc-slide"><img src="https://imgd-ct.aeplcdn.com/664x415/n/2fhd7sa_1471629.jpg?q=80" alt="Hyundai Xcent" loading="lazy"/><span class="fcc-slide-name">Hyundai Xcent</span></div>
-            <div class="fcc-slide"><img src="https://www.hondacarindia.com/_next/image?url=https%3A%2F%2Fwww.hondacarindia.com%2Fweb-data%2Fmodels%2F2024%2FnewAmaze%2Fexterior360Desktop%2FAMAZE_EXT_360_PEARL_WHITE_V-3__00009_chooseCar.png&w=3840&q=75" alt="Honda Amaze" loading="lazy"/><span class="fcc-slide-name">Honda Amaze</span></div>
-            <div class="fcc-slide"><img src="https://imgd.aeplcdn.com/664x374/n/ssadv9b_1808221.jpg?q=80" alt="Tata Tigor" loading="lazy"/><span class="fcc-slide-name">Tata Tigor / Ford Aspire</span></div>
+            <div class="fcc-slide active">
+              <img src="https://images.overdrive.in/wp-content/uploads/2013/05/Toyota-Etios.jpg" alt="Toyota Etios" loading="lazy"/>
+              <span class="fcc-slide-name">Toyota Etios</span>
+            </div>
+            <div class="fcc-slide">
+              <img src="https://www.carbike360.com/_next/image?url=https%3A%2F%2Fs3.ap-south-1.amazonaws.com%2Fcb360static%2Fuploads%2F93915ea9-f81f-41bb-9972-b286be448b48-small-New%2520Project%2520-%25202025-01-16T161103.598.webp&w=3840&q=75" alt="Maruti Swift Dzire" loading="lazy"/>
+              <span class="fcc-slide-name">Maruti Swift Dzire</span>
+            </div>
+            <div class="fcc-slide">
+              <img src="https://imgd-ct.aeplcdn.com/664x415/n/2fhd7sa_1471629.jpg?q=80" alt="Hyundai Xcent" loading="lazy"/>
+              <span class="fcc-slide-name">Hyundai Xcent</span>
+            </div>
+            <div class="fcc-slide">
+              <img src="https://www.hondacarindia.com/_next/image?url=https%3A%2F%2Fwww.hondacarindia.com%2Fweb-data%2Fmodels%2F2024%2FnewAmaze%2Fexterior360Desktop%2FAMAZE_EXT_360_PEARL_WHITE_V-3__00009_chooseCar.png&w=3840&q=75" alt="Honda Amaze" loading="lazy"/>
+              <span class="fcc-slide-name">Honda Amaze</span>
+            </div>
+            <div class="fcc-slide">
+              <img src="https://imgd.aeplcdn.com/664x374/n/ssadv9b_1808221.jpg?q=80" alt="Tata Tigor / Ford Aspire" loading="lazy"/>
+              <span class="fcc-slide-name">Tata Tigor / Ford Aspire</span>
+            </div>
+            
           </div>
+          <!-- nav arrows -->
           <button class="fcc-arrow fcc-prev" aria-label="Previous vehicle">&#8249;</button>
           <button class="fcc-arrow fcc-next" aria-label="Next vehicle">&#8250;</button>
+          <!-- dots -->
           <div class="fcc-dots"></div>
+          <!-- category badge -->
           <span class="fcc-cat-badge">Sedan</span>
         </div>
         <div class="fcc-body">
           <div class="fcc-header">
-            <div><div class="fcc-title">Sedan Cars</div><div class="fcc-subtitle">8 vehicles available</div></div>
+            <div>
+              <div class="fcc-title">Sedan Cars</div>
+              <div class="fcc-subtitle">8 vehicles available</div>
+            </div>
             <div class="fcc-seats-pill">👤 4 Seater</div>
           </div>
-          <ul class="fcc-models"><li>Toyota Etios</li><li>Maruti Swift Dzire</li><li>Hyundai Xcent</li><li>Chevrolet Sail / Optra</li><li>Honda Amaze</li><li>Tata Tigor</li><li>Ford Aspire</li></ul>
-          <div class="fcc-amenities"><span>❄️ Full AC</span><span>🎵 Music</span><span>📍 GPS</span><span>✨ Sanitized</span></div>
+          <ul class="fcc-models">
+            <li>Toyota Etios</li>
+            <li>Maruti Swift Dzire</li>
+            <li>Hyundai Xcent</li>
+            <li>Chevrolet Sail / Optra</li>
+            <li>Honda Amaze</li>
+            <li>Tata Tigor</li>
+            <li>Ford Aspire</li>
+          </ul>
+          <div class="fcc-amenities">
+            <span>❄️ Full AC</span><span>🎵 Music</span><span>📍 GPS</span><span>✨ Sanitized</span>
+          </div>
           <a href="#" class="fleet-btn fcc-book-btn" data-v="Sedan Car">💬 Book a Sedan</a>
         </div>
       </div>
 
-      <!-- SUV & MUV -->
+      <!-- ── SUV & MUV ── -->
       <div class="fleet-cat-card">
         <div class="fcc-slideshow" data-index="0">
           <div class="fcc-slides">
-            <div class="fcc-slide active"><img src="https://motoroctane.com/wp-content/uploads/2020/04/innova-crysta-1.jpg" alt="Toyota Innova Crysta" loading="lazy"/><span class="fcc-slide-name">Toyota Innova Crysta</span></div>
-            <div class="fcc-slide"><img src="https://5.imimg.com/data5/GD/IO/GLADMIN-24911211/mahindra-xylo-car-500x500.png" alt="Mahindra Xylo" loading="lazy"/><span class="fcc-slide-name">Mahindra Xylo</span></div>
-            <div class="fcc-slide"><img src="https://5.imimg.com/data5/VK/TC/YQ/SELLER-48821263/mahindra-marazzo-500x500.png" alt="Mahindra Marazzo" loading="lazy"/><span class="fcc-slide-name">Mahindra Marazzo</span></div>
-            <div class="fcc-slide"><img src="https://stimg.cardekho.com/images/carexteriorimages/930x620/Kia/Carnival/8001/1755866555419/front-left-side-47.jpg" alt="Kia Carnival" loading="lazy"/><span class="fcc-slide-name">Kia Carnival (Premium)</span></div>
-            <div class="fcc-slide"><img src="https://shivamautozone.com/wp-content/uploads/2024/09/ERTIGA_BLUISH_BLACK.webp" alt="Maruti Ertiga" loading="lazy"/><span class="fcc-slide-name">Maruti Ertiga / Renault Lodgy</span></div>
+            <div class="fcc-slide active">
+              <img src="https://motoroctane.com/wp-content/uploads/2020/04/innova-crysta-1.jpg" alt="Toyota Innova Crysta" loading="lazy"/>
+              <span class="fcc-slide-name">Toyota Innova Crysta</span>
+            </div>
+            <div class="fcc-slide">
+              <img src="https://5.imimg.com/data5/GD/IO/GLADMIN-24911211/mahindra-xylo-car-500x500.png" alt="Mahindra Xylo" loading="lazy"/>
+              <span class="fcc-slide-name">Mahindra Xylo</span>
+            </div>
+            <div class="fcc-slide">
+              <img src="https://5.imimg.com/data5/VK/TC/YQ/SELLER-48821263/mahindra-marazzo-500x500.png" alt="Mahindra Marazzo" loading="lazy"/>
+              <span class="fcc-slide-name">Mahindra Marazzo</span>
+            </div>
+            <div class="fcc-slide">
+              <img src="https://stimg.cardekho.com/images/carexteriorimages/930x620/Kia/Carnival/8001/1755866555419/front-left-side-47.jpg" alt="Kia Carnival" loading="lazy"/>
+              <span class="fcc-slide-name">Kia Carnival (Premium)</span>
+            </div>
+            <div class="fcc-slide">
+              <img src="https://shivamautozone.com/wp-content/uploads/2024/09/ERTIGA_BLUISH_BLACK.webp" alt="Maruti Ertiga / Renault Lodgy" loading="lazy"/>
+              <span class="fcc-slide-name">Maruti Ertiga / Renault Lodgy</span>
+            </div>
           </div>
           <button class="fcc-arrow fcc-prev" aria-label="Previous vehicle">&#8249;</button>
           <button class="fcc-arrow fcc-next" aria-label="Next vehicle">&#8250;</button>
@@ -227,22 +278,46 @@
         </div>
         <div class="fcc-body">
           <div class="fcc-header">
-            <div><div class="fcc-title">SUV &amp; MUV</div><div class="fcc-subtitle">11 vehicles available</div></div>
+            <div>
+              <div class="fcc-title">SUV &amp; MUV</div>
+              <div class="fcc-subtitle">11 vehicles available</div>
+            </div>
             <div class="fcc-seats-pill">👤 7–8 Seater</div>
           </div>
-          <ul class="fcc-models"><li>Toyota Innova Crysta</li><li>Toyota Innova Hycross</li><li>Toyota Innova (Classic)</li><li>Mahindra Xylo / Scorpio / Marazzo</li><li>Chevrolet Tavera / Enjoy</li><li>Maruti Ertiga</li><li>Renault Lodgy</li><li>Kia Carnival (Premium)</li></ul>
-          <div class="fcc-amenities"><span>❄️ Full AC</span><span>🎵 Music</span><span>📍 GPS</span><span>✨ Sanitized</span></div>
+          <ul class="fcc-models">
+            <li>Toyota Innova Crysta</li>
+            <li>Toyota Innova Hycross</li>
+            <li>Toyota Innova (Classic)</li>
+            <li>Mahindra Xylo / Scorpio / Marazzo</li>
+            <li>Chevrolet Tavera / Enjoy</li>
+            <li>Maruti Ertiga</li>
+            <li>Renault Lodgy</li>
+            <li>Kia Carnival (Premium)</li>
+          </ul>
+          <div class="fcc-amenities">
+            <span>❄️ Full AC</span><span>🎵 Music</span><span>📍 GPS</span><span>✨ Sanitized</span>
+          </div>
           <a href="#" class="fleet-btn fcc-book-btn" data-v="SUV / MUV">💬 Book an SUV / MUV</a>
         </div>
       </div>
 
-      <!-- TEMPO TRAVELLER -->
+      <!-- ── TEMPO TRAVELLER ── -->
       <div class="fleet-cat-card">
         <div class="fcc-slideshow" data-index="0">
           <div class="fcc-slides">
-            <div class="fcc-slide active"><img src="https://www.vpltravels.com/wp-content/uploads/2023/07/Untitled-design-46-1024x1024.webp" alt="12 Seater Tempo Traveller" loading="lazy"/><span class="fcc-slide-name">12 Seater Luxury</span></div>
-            <div class="fcc-slide"><img src="https://www.belhasamotors.com/wp-content/uploads/2024/11/force-urbania-14-seater-bus.jpg" alt="14 Seater Tempo Traveller" loading="lazy"/><span class="fcc-slide-name">14 Seater AC</span></div>
-            <div class="fcc-slide"><img src="https://images.jdmagicbox.com/quickquotes/images_main/force-tourist-bus-20-seater-2220357115-5ztb3wt4.jpg" alt="20 Seater Tempo" loading="lazy"/><span class="fcc-slide-name">20 Seater Tempo</span></div>
+            <div class="fcc-slide active">
+              <img src="https://www.vpltravels.com/wp-content/uploads/2023/07/Untitled-design-46-1024x1024.webp" alt="12 Seater Tempo Traveller" loading="lazy"/>
+              <span class="fcc-slide-name">12 Seater Luxury</span>
+            </div>
+            <div class="fcc-slide">
+              <img src="https://www.belhasamotors.com/wp-content/uploads/2024/11/force-urbania-14-seater-bus.jpg" alt="14 Seater Tempo Traveller" loading="lazy"/>
+              <span class="fcc-slide-name">14 Seater AC</span>
+            </div>
+            <div class="fcc-slide">
+              <img src="https://images.jdmagicbox.com/quickquotes/images_main/force-tourist-bus-20-seater-2220357115-5ztb3wt4.jpg" alt="20 Seater Tempo" loading="lazy"/>
+              <span class="fcc-slide-name">20 Seater Tempo</span>
+            </div>
+           
           </div>
           <button class="fcc-arrow fcc-prev" aria-label="Previous vehicle">&#8249;</button>
           <button class="fcc-arrow fcc-next" aria-label="Next vehicle">&#8250;</button>
@@ -251,22 +326,43 @@
         </div>
         <div class="fcc-body">
           <div class="fcc-header">
-            <div><div class="fcc-title">Tempo Traveller</div><div class="fcc-subtitle">5 variants available</div></div>
+            <div>
+              <div class="fcc-title">Tempo Traveller</div>
+              <div class="fcc-subtitle">5 variants available</div>
+            </div>
             <div class="fcc-seats-pill">👤 12–26 Seater</div>
           </div>
-          <ul class="fcc-models"><li>12 Seater Luxury Tempo Traveller</li><li>14 Seater AC Tempo Traveller</li><li>17 Seater Executive Coach</li><li>20 Seater Tempo Traveller</li><li>26 Seater Tempo Traveller</li></ul>
-          <div class="fcc-amenities"><span>❄️ Full AC</span><span>🎵 Music</span><span>📍 GPS</span><span>✨ Sanitized</span></div>
+          <ul class="fcc-models">
+            <li>12 Seater Luxury Tempo Traveller</li>
+            <li>14 Seater AC Tempo Traveller</li>
+            <li>17 Seater Executive Coach</li>
+            <li>20 Seater Tempo Traveller</li>
+            <li>26 Seater Tempo Traveller</li>
+          </ul>
+          <div class="fcc-amenities">
+            <span>❄️ Full AC</span><span>🎵 Music</span><span>📍 GPS</span><span>✨ Sanitized</span>
+          </div>
           <a href="#" class="fleet-btn fcc-book-btn" data-v="Tempo Traveller">💬 Book a Tempo Traveller</a>
         </div>
       </div>
 
-      <!-- LUXURY COACHES -->
+      <!-- ── LUXURY COACHES & BUSES ── -->
       <div class="fleet-cat-card">
         <div class="fcc-slideshow" data-index="0">
           <div class="fcc-slides">
-            <div class="fcc-slide active"><img src="https://cdn-ilbaihh.nitrocdn.com/suqrOmtFLSELwKyLIigLsDCGbTECElxo/assets/images/optimized/rev-434d918/svanigroup.com/wp-content/uploads/2024/03/Eicher-Bus-35-seater-NonAc-.png" alt="35 Seater Luxury Coach" loading="lazy"/><span class="fcc-slide-name">35 Seater Luxury Coach</span></div>
-            <div class="fcc-slide"><img src="https://ommsaitoursandtravel.com/wp-content/uploads/2023/10/New-Project-27-1.png" alt="45 Seater Volvo Bus" loading="lazy"/><span class="fcc-slide-name">45 Seater Ultra-Luxury Volvo</span></div>
-            <div class="fcc-slide"><img src="https://www.volvobuses.com/content/dam/volvo-buses/markets/india/1860x1050-volvo-9600.jpg" alt="55 Seater High-Deck Bus" loading="lazy"/><span class="fcc-slide-name">55 Seater High-Deck Tourist</span></div>
+            
+            <div class="fcc-slide">
+              <img src="https://cdn-ilbaihh.nitrocdn.com/suqrOmtFLSELwKyLIigLsDCGbTECElxo/assets/images/optimized/rev-434d918/svanigroup.com/wp-content/uploads/2024/03/Eicher-Bus-35-seater-NonAc-.png"35 Seater Luxury Coach" loading="lazy"/>
+              <span class="fcc-slide-name">35 Seater Luxury Coach</span>
+            </div>
+            <div class="fcc-slide">
+              <img src="https://ommsaitoursandtravel.com/wp-content/uploads/2023/10/New-Project-27-1.png" alt="45 Seater Volvo Bus" loading="lazy"/>
+              <span class="fcc-slide-name">45 Seater Ultra-Luxury Volvo</span>
+            </div>
+            <div class="fcc-slide">
+              <img src="https://www.volvobuses.com/content/dam/volvo-buses/markets/india/1860x1050-volvo-9600.jpg" alt="55 Seater High-Deck Bus" loading="lazy"/>
+              <span class="fcc-slide-name">55 Seater High-Deck Tourist</span>
+            </div>
           </div>
           <button class="fcc-arrow fcc-prev" aria-label="Previous vehicle">&#8249;</button>
           <button class="fcc-arrow fcc-next" aria-label="Next vehicle">&#8250;</button>
@@ -275,16 +371,26 @@
         </div>
         <div class="fcc-body">
           <div class="fcc-header">
-            <div><div class="fcc-title">Luxury Coaches &amp; Buses</div><div class="fcc-subtitle">4 variants available</div></div>
+            <div>
+              <div class="fcc-title">Luxury Coaches &amp; Buses</div>
+              <div class="fcc-subtitle">4 variants available</div>
+            </div>
             <div class="fcc-seats-pill">👤 21–55 Seater</div>
           </div>
-          <ul class="fcc-models"><li>21 Seater Mini Bus</li><li>35 Seater Luxury Coach</li><li>45 Seater Ultra-Luxury Volvo Bus</li><li>55 Seater High-Deck Tourist Bus</li></ul>
-          <div class="fcc-amenities"><span>❄️ Full AC</span><span>🎵 Music</span><span>📍 GPS</span><span>✨ Sanitized</span></div>
+          <ul class="fcc-models">
+            <li>21 Seater Mini Bus</li>
+            <li>35 Seater Luxury Coach</li>
+            <li>45 Seater Ultra-Luxury Volvo Bus</li>
+            <li>55 Seater High-Deck Tourist Bus</li>
+          </ul>
+          <div class="fcc-amenities">
+            <span>❄️ Full AC</span><span>🎵 Music</span><span>📍 GPS</span><span>✨ Sanitized</span>
+          </div>
           <a href="#" class="fleet-btn fcc-book-btn" data-v="Luxury Bus / Coach">💬 Book a Bus / Coach</a>
         </div>
       </div>
 
-    </div>
+    </div><!-- /fleet-cat-grid -->
   </div>
 </section>
 
@@ -297,16 +403,16 @@
       <p class="sec-sub">Book a round-trip cab from Chennai to any destination in South India.</p>
     </div>
     <div class="routes-grid stagger">
-      <a class="route-card" href="#" data-t="Bangalore"   aria-label="Book cab to Bangalore 347km"><img class="route-bg" src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=500&q=80" loading="lazy" alt="Chennai to Bangalore cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Bangalore</span></div><div class="route-dist">📍 347 km</div><div class="route-cta">Book Now →</div></div></a>
-      <a class="route-card" href="#" data-t="Tirupati"    aria-label="Book cab to Tirupati 145km"><img class="route-bg" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSEhIWFRUXGBgYGBYYGBoaGBodHR8WGB0XGBcYICggGholHRcdITEiJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGy4lHyYvLS0tLSstLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAEAQIDBQYAB//EAEIQAAIBAgQDBgQEBAUCBQUAAAECEQADBBIhMQVBUQYTImFxgTKRofAjQlKxFBXR4QczYoLBJPFDRGNycxY0U5Kz/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECAwQF/8QAJhEAAgICAQQCAwEBAQAAAAAAAAECEQMhEhMxQVEiYQSB8HGhMv/aAAwDAQACEQMRAD8AGpRTZqAY5Op+VdbAVS0Fcx4jwzPnUFriDDcSPrQllqDSzVdb4kPzD3H9KKt4pG2bXpzoLJprppK6llFFOmmTSzVsC04GmzXVLBIGrs1MrqAfnrg1RsactUg+aUU2K6llHzTgajFPFQDprppK6oBZpZptJQD5pQajmumgJZrpqPNXZqhSSaUNURauDUBNNNJqPPSF6AkJpJqPNTS9ASE03NUZemZ6Amz0meowa6agM/fxDGJafv8Aeos1QE1wNaMk6npz867LUCrrTw560ISFYpFFd3jUveTyq2KLGxxAzD/McqOS4DqCDVEIqSzcKmVNSyl3NdNApj+q/KlfHDkPnQBs0s1Uvjm11od8Q7bmgsumxKDdhUF3iSgGBJqog86XJ1oS2F/zNz0+VRXsVcbdj7aftTPpTGOoiqgxS7fqPzpVxLDTM3zpIpAOcUslEv8AG3P1n5061i7v5Sxn3/faoyunrzqfCYkpIEa9flSy0Nt4+4BGc/v9TTl4pd/VPqBQ7b/cU5ANSRvsBypaAUvELwnUe4E0TheJH/xIA/UOXkRVW42iujTzqFNCMSh/OvzFSTWZVYp5uEagwaA0VJNUdvGXB+afXWphxJ+g+/eoWy2zUmaqh+IvyAFEJxFSNZB+dBYeWpuaq+7xRBEGeo2iphjbf6xQBWamlqEucQtj80+gNRLxa3zzD1H9KWgHk0k1VXONLrlWemsTUVzjZGyD5/0paBczXZqpk44fzIPnTl46nNSD5EGmgVs1yt5igg3nTs01qjFhYfzp6v0NBUqmlFsOzUqnoaFW9TziBUpiwjN5U7N5RQ4vVIrHoKhSbXrTZnnpTJFcHoCVF9qUMOVNmknlNQEiNXBo571DBnypzGNfKgFut60+zoJ60xV2k+1KwJ6UAuYV0600qa5QPOqBSflXR/aukDlNIzSZJpYFIPKky+dJmmudvOqSiQVx3/4pguDkab3wqFJiaQ0O+J6ConuTvUAU95VG86UMuIJJ5Dy5UxjmrlXLSwSqx5k/OnMwMaxXcOZGvWkuEhC6ho3gkAweWh3rd9quzVizhGGHsFroOcsWdmCTqQAYECJBG0nUiaxKVOjSVmAyCevKuvHLoYJ38uulWVvhql43HeWFnvLcw4OfnvPPYRUH8vlMxknu3aAVIlWC8jtXPrQ9m+lL0Vq3ZpCaPxnDhbDEZiQ9sRKyQygmAJ1zaDfcVsO1fZHB4fDG+HZHyqBaLhgXMcyubSegG3w1tZIvaMuDXc8/LVHOtOZ+lIjc66mRt0EUq+tIZO5p3d1GCBTTs1NAFKAK6Wc6Fz04XKbpSCKAlzCng1BlrtaAmD07N51CtKKAmF2OdSrfNCgVKoFR0VEneedL32lM0iKUDTapoC5qcb3pTRaJ50q2T1FLRdjv4jrSriDXC2oOpnn5VwidFqWhseLx5UhutO1cd94HIU0A8yKlotChm9KQvFR3TynWmE07gmV9opjtJ3pkxrNInp9+tUEhgVwURvTT8qUW4/MKgEURNNZDU/dHfl9661MqgR4tNdv71HItAykjYU5rJBljH3/f6GiO8Gs8/T/v9mh7jj+lS2U1P+HWBR8USy5gltmE7TKrI/8A23r1G1cYqpQQdtPfXUieXPpXl3+Gl8DGEkwDaYaiZ8VsAADXeNq9L/mVlbhBLAyAWKXAupECSIElokxPsY8+TudYdivbsth88nDpmJVvdNFMFjtP9Zqg4n2XQhzbs2xlU28k6DOysbkyTmAmNo6bUZi+P3P4lLiue4ByGASsgrnGgILLr5wre9ljuJ2iCWcW1LRqjnNE6jKNPDuI/esGwfgnAbVts4w6d4mWW3AZFy5oJgGDyA3rQ/wq3v8AOtK3hYKSBoGgMAfMR8qoL3ExbXIhOe74kYI4BOcBh4hIMEnXpT+EcbRLYt373iJKLnMu2gI8JEs2sGR69KEPI+J4IW7122CIS46D0BMa89BQrqBvRPFXLX7xGoN1yD1GYkemlQgzvr67feleq2cWiFz0pEbSpGt+fty8tfvalNgnX7+lG0SgEGnCmg+tKK6mDprqURXFatko5dafpUNPWjA8vpXFqbNIW5UBJNNLGlNKBPKpdCjiakttFRKZri9RstBhujmaRsQI0oIfZpSwrNFC0uDnSd7QuaumlAIzzShz1obPO1OytGvrVBMTPMV3PemZI579Af3Pt86cCBykdT/bQ0FDi3SlKtz09dP3pucxH9P+PvSjMFw25dtXLyiFt+ep2Jj0BmpdFoDGx3J+QpZI2gaa9eX9vrUZb2putAS3DOoO/Wnq3n8qgmngUBMsfq+YpLv2KYK5v3+9qyDZf4cYYC+LrqSNQIkkkamBtExrPTrXoK3Gdjc7u5lFw7FQBlWPEC2o1YdJ9BVB2AwRGGnOxBVmymIBaQY02hBzq3tcLXuBlEM85jLBiGnSTEnXmR7V5pO2d4rRa4m6zwTabQyBoJ8JEGG1+KIrK8W4e19kPckraurcYZRDQCMh1jTOD/tPrWkwnDrRWGtrpJAk6TrqZ15c6yPafHd2rIRCZnJAOhgBlUkgEaftWUaos7er2XNliLZ0MALLkmQ0mZJG1XLuxyFrL+By4IygSQV1k9HI9q864bjSyhVUjvJbu5OpTxhgdxtGnWtzi8Nm/wAuQpVNrh8oJBYGPrNBR5L2kwxtYi6pQp4mIVhGhJIjUiPeKrVIGnM1u/8AEvgwS3avqWYxluM1zN5qQGOknN8Om21eel+demG0cZ9wrMtRBz0FDvcJmaZrWuJmxgb09p/enqR10qNLBYEjxQCTE6Aff1pbVslsvyqqRXEkVqNw/Db9y2123aZkXdgNBpJ9dKZheFXrhCoslpAEidJnc+R+Rr2W3h0S0baOF8BjwgROsiNiTrtzrOTJxNQhZ4eLtNLnpWl7YcCuJifAuZWAIKgBZ1kAdYg+pqlbhbg+IETOpgDTzJ+9K0pJqzDQLaeegp+aj8NwW86Z0tMRrrmXXKJMSeQ126VFiMKUIV1gxsT8tRV5Cge3bLaD/tRBw5iFO4IMaj3pgdRy0Ma/01HP9qmw58JMATMDc77yOs/QVynJlUSNMIOZ+VNfDkba+1TXbjBgCCp5+h10Efc13e5joJOwG/y++dFJlpAwFOiOY9qsDwW7E90wkZvONTJHIAa0RgOx+Mvgm2iwDrLAfQ6105IjRUrl5yfp6daZIjYTp96mPpWrT/DbHnfuwPNyf2Fde7A3EUl8RakHKVUMzT01AHvUc4rbZVFvSRnFtfgm5m1V1UCQJ0JkjfcD5GhlfWfnNemPwPDLhe6ySvxEltcwHxEjUc+cVkjwS0DAsYy5AklLlrL/APy+5gTXnwflwyNo65fx5RSZQd4a4kdfatRa4SikE8NxrbGD8+SDp9amsYC2rh/5XjCQZAIYj5Rr716eSOHEyDk1vez+DVMP3biTcBLjTmIg+1NsrbKiyeG4tVJUTkMjUkEtE6Ek1quJdnlCBrFsllJFx2dpIGWMoCw2jHXTVec6cckrR0hGmeRcRwptXWttyOnmNwflQzGtnx/s9eYM77Kh0En4VYxtJ8ceoqqfs22oRLjkEhVyuM3jtLBIXmHOvkKqzRdIPE+5TXsM6EBgQSAddNDzg/elRi5HnW57TcGU2DiSbouoVQoyrGXSWOUaAFoliNuZNYrJNMc+UbEoU6H2oIp+Hs5nCyZJgHzJge2tDNmB0j9q1v8Ah/w83Lr3nVWS0p0J/MwISOmoJnlArUnoyls3NjEPZwxYZVUKLZ8JJJVcp36hZ2110BNH2sWAoBxFseKAuSIMmFgwSBt8uoqQYfLZtCIJYbc/P5fWiMdbZnBBC8gSuxysZBzSTB2rzHYgGOdR/mrDbTaYafDsB161WYzhTY206M6BWPxZDmnTxoSdNOXtWjw1ybYIDCVEAwT8IInKYnzqswl8ol1yBGYMDOWZhjux5AmNOgoCp4f2ZNp2y3FYMmXxqZAgSqwZ2bz6VNwziLPbD96ogBYyNpuABpr8P703gHHf4qz3psi34ZUlpkErpLExmyx7cqP4TdZLt+20jKVcKNgGWY1PkecVQVfah+9w92wcTaBIELpqyzcA0E7JO3I8hXkhwemY3LesQMxkA9QBXu+CwoR8+aRAg5RJBCgS2bU7fI15N/iHwc2sSbkgrel1gRGuqkSdj03mumOXgxNWjNwNdZ9P71v7P+G3f27d21iFthralkdcxDR4oZSBB3FZLsvwcYi93bEhQjuxWJAUaTPLMVHv7j2nD4drKLasovdqIGe4+bc+s+tbnKuxmMbPM+F4rC2ECm7amNWAcZjzJOkidIG1V+J4It7E2mslAtxlkoCAoXVn1HQfMedBX8SxFlLTW0PdgNntBgRr8HgaOZ3G9ajs3x9badzatNcaS4OcroWYDw92QPhHMegrxQg4T5WeuTUo1Rb4y3eOKTurgFhQM6ZSFJA+EZViCDMRutXli2AzaAzA57nMR+UddvKs3geNkNmuYf8AEC7vegwAs5ZtmB4QYFH4bjmbKxtBVM6m8sjfkyAH0murZzSE7TjEDClsNeFpkUu3V1CtKgldDInQ/l96x3G72JfC2bpNx2Vm7ySWIL+IEADwrpEda3uE4grSLjQSTl/EtwBDbw0HkPlQfEe0YtXGTuw4OufvlAJjVfCrfq3kTPlWoyozKNkvAcZcODQ5Rbu5SVQg6kiBMCQGKzAI0ryvjV7EO5vYkMGuFgMwI+GFIUn8okCvRrHaslyVw+8Ce9A66k91Ma1nf8R+JB0t23s5WDSpFzONgCCvdiZA66FeetWEvkScdGKr0P8Aw0RGsYrvkZ0QocoUMTIbMAp3nKNKy/B+ELflCe7IT/Mglc2YfEPMNlgR8I869A7H8EOFW7bF5bvfBWkKUgJy1OshjtVySVUjMYtPZMt3hs5v4O+COf8ADa6SOn3Ned9tQFx2IVDADiBzHhXptXpuJ7ZLYY21st4GKvAJEgEmDzjT6+dVfF+yuGxN4Yl3ZDdKsUJAzT4oI3EqAsCPnrWYNxfyLKNrRiMPx/FIAhdir+Iq5mdAASTrEwd4MCasOA9pMVYuZEYLJUMMtvJpr4sqzJiNwdSJHK/4x2YwbsqLbyECITSATm9M28ctT5RF/JsKji7N0gHPEKyyTOWSZNdLTM00FtxvHtIV7zxocttZBUQZKpAJmfXy0pxe4jMWjMLtxSTJY6tqSANyc23OrviPafJaVwjHMpKgwIg5SW3+XlWfTiZuF2e4JzAkC2T8zHUxrXg/Kk2uLR7Pxo0+RYYbij3AuYqQFU+EGJIOumka/Ss9dvzeyuyQzhTvIVlM+E/mOum0xR+IvqqBGcNplANpuQIEgDz0O29DpZtO7XC4JPiy90dCoAJ1Gg02868sEo7PTLejX3OyHC7rKGQM6oqAC/czQigAZVcSQF3jlWS7Xdi8S2IH8LZPcrbS2njEwuYR42zHTmaseFvYS9ZvWySYuBjJ8JIZdARHIacorZcKvAgt31xiF8Stlj2hRX0FllHd3/p4JY/BiOGdkboxODu3GRe6S0r2ySXzJm6AruQd69Iws68ttPas7iiTeS6UzAgQwMnUARlAgwXnnUnCb1y8WJu3FEmRlTwkFYKhkndT5a+ddXLkkzHGi/xBzAp10PkDInf1qC2cq5M0yDlJ85hSARp/xVNfxFxHW5mJDWgQqhZY+HXRdd416ab0Ng+IXbti1daUuqEuXBlAgM4BEFembn19oCitWrq4bHq0ZEsspADQzTci5JA8QyamTuOmvmCud81ep27ZupiFDtDIysq5IYtcuwpGUmMoO0ftVP2d4NhAq3Sj95bOf4m0gg/DMHUEa1MUkolypt2YYIzTEbTqQJ2Gk7ny8q9R7KcMt/w1k27rDviC4EETlBJ0EysQNdwTGtWvaTgi4lkuKBOkkgfCNTl89fSKNwmFBu2yipATYKQAWC6wGgaD1g1eopLRFCu4JibdpXCG8+QaOCrs+3Jl1UnMNQN+dEsbawBiuRJmWIOUAAW5keGSPaKIswt9vJSfhAGomASf9JOtLZwZLM4IKloYZACdRIHijzJg7VCkS40IoBxJjKCPw3Phy6cuiz10NJwzC50hLpKSZJUHNKgZhmHh9DVnZa5Ak6kclgc40zHp15VXcNZybujNmlpHhMkGPiJiYG1ACrgBaRkRsgVoEKgWAEbQchNzQQDyoTHXBbxSh8Rla7bObw66sAvw66mRPOabZ7RPcxt7DCwGVGVWuTuXWQAvMwv0qx41cuIoZIAW6rAnWQFZiFIPQRttPqKB3f5R4sWfCikypXTQgksYnTn1NZLtxgkxIi1iFu3bI8aZSrKCT4p2ico118O9bLiFs3JBcoSsfAYG5ljmEjTy2qRcPFp7asUBWCyqARoQSJkeWu0UToGG7LcGv4JnF67aQMumTK9wEjXXKGVcvQ9PM1aYni9oGBi7gjSAFAHoBoPasv28S5hbIuWbru/ei25cIR4gzAwBIJhd+sVm+JWOIWWAc2iWUN4SCNZG+nMGqrl6DSWlZpsF2NDku2JVIOVYghgumb4tj+0VZYLsTbQyMXJgDlyLGRDb+KqFsKWdDnnqY1B05xvNWyIgyxcVjBzfh6T1Agxz68qjaJ8gi92BtNvijy1yry96nXsVbiP4qYiJVdI/3VQ8RwwKgBgTJJi3HPcaenXY+xmHsoElrq5hGnd6RtBJXUx+3nUteyb9Bz9g7UQcQpHPwL1n9VEJ2KsyD3q6CB4fSPz1UY+yHU5XSeUII/Lptod9ekCouHYELbOe4qGPCMkxoPiIG0gbdD1q8vsJP0aBOxagg9/OhEFAQZ661Jd7FI8ZnQxtKen+ryqkupbIjvLe3h/D1Bn80KJEemo9qC4dg4Ly6qB1tzr1Gh0/vUtey7NQnYhFMpcC9QFMHygt70QezLyIvhY6INvFp8XmTVB3Kc3QrBDfheInTVWyaDQ6HrQOHwU3pLpljU93oZzbCJ57cp8qt/ZNo09/sYGbN3uU84Xffz6mn3eydwvmXE5RM5RbUgaRpJqot4W2NntNvJ7rffRRl03+gqvxWGi4hVlif0ECJ5jrET1+gnK/IpmkfsjeJn+L5gj8JZmZnfc6fIVB/wDRd6STilMxvbI2kA6ONY09hQa4dFy/iITOs2hAGugBXfzqt4hg5ywyfFOiRAkTyHnHQRWuf2ZpmjxPY+865WxKwNoRv9X/AKn+r6VInY9x/wCY/KAfCdYJP6vOqgYRAs97bLSIm34QNJJ8Pi5mfOhuK2AVlXTloEgnTyA0/wCazJRl3Nxco9i/XsY2s4jeNYYEROg8Uc6QdjHDFjiZkQdD1n9Xp8qqMPhLeXW5bJyiB3YOuvxGNRqOdRcSwKsrZWtTAgBACSJkTA6j5VnhAvUmXp7HPP8A90RAAHhmBvAk/cUVh+zt5WJOKLiCsMukEGQYOpkzNZnAYBAoLugIXbJJmToWg/SlxFhWTRrc5dctuNZGxjT71qpRWg5SezWWeD3kJK4iNFAEE5QCSQJbnIn/ANorrPCbqf8AmATqJYEmCII+KI57b1jOE4VMg7xlG+htkn8pAzEGBp+/vJiLFsqPHb+FgYtES2nlpz66mraRn5M19nhlxXz/AMQJAyrIHhByyBrzKztTMRwpmzziBLrl1k5VylSB4tiTm9ax3CMEoXxuBuY7vWdOcEAb/Sp3tqVA7xJggxajXkZA+9/Kra9j5ei+wfZ7u83/AFSmYjQDLDM0DxeZqCz2ZtopH8UhnMJJjRuUBorP8Iwaie8cgTsE33Eg6xv+3Si4QqFNySMwMJv0O2v9/Kpa7WX5PZroZk/zLZbLCsNANIJDAz9aiwLXYLLiwTOXMygljAA32100qu4MLYtWreeXAYFYIzEkkCYgaEGjOG4U9yiEH/xG3JEq6ZeQiJrKSXY1b8hvDwzMxOIt7wCGBJ0HLlBnSPlNGM1xCc15AM35hl1+IxJ13In+lCcNwVpbIcW7UySGGQZQCSIbeQST6zUfCcGtuc9tCBIklTmjbViTtMSTz2rRC3XEkaPetzAnUD6T50FaDtmUX13hiB6RlMwpH3yqS7eAWThRdlRly9y0jSAS7ryAPSANeVJgVCsXjJnaSqxllROuVfPmZoAFeCJavXb63fG+R2gDLKjuwY15E6f3qXFljbYNetgWy51UCPiXfNoYJG/7mhOKdocPZuJavXHz3BKqFZs2ViZGWy2xE6/8VaX7Nt1yMudS5LIwzAkSwEBIjNr6qPSgAuG3Myhjik1XxDNrCzPORE7+dGKukHFZlYQII0BI8U8x5n0obh91O7uKqW5lxBgTM6SVEiQBIEGOY1qO/grbEOTaAzK3xRl0yyGU7woH7VQZPt5gRDFb1u4GyggNmYFYMsJ03IERpvyoziHAkLDM6NCgfCNInQDN9zRfa1MMuEYJ3Ks9xfFIkk+HMXOuwj0A05VicJcQ5jd/CYsfCtsuI6hgv0OtKst0G4A/hrt8hPPzqcF83hCxE6xVPhOJ5FjJOYD8w308vuKk/mu6hI5DUc/avLKErZ6oyjSLdQZ0A6yfn/zSM2oJj5DY0/j1zu7OH7qybr5PxcoJyjSC2hgfFE9DVYnFJs3LiqCVZUVW08TEKQyiGkTMc4I03F6MrpGOtHjbLIwZOntH3yppaNJBmeQn96Ew1m7bJ/iFQFrbXkIBTxCZU5mIIMEbdKF/nIXxZNDJknfruu2n0pLFJPWywzRa2XSnXWB6AfXWuukLO30iq1+IshINoggZjrqAYhtBt4vrS8VxT5LYtqkOkux8cT8KiCMpjXXfSOcyGGUpUyzzRjG0WQmANPv3p2U76e1ADFlLVssq58zKyjw6iMrZDJBIb0kedR/zncFAIJmW5iB+nzrMsUk6LHLBqy2yHSAPeB/zTd3jSYmOf70FgMaHuIrKFVgTmzDZZkiRyiocO+IzpiHRRbd2WMh0QMg1aZHxDxdflW4YXIxPNGJaFW9f+PrTbnQCT6GhMXxAqbhUZ0V8uYERrMGY5xQ4xzM2UWzOXNoQTliZj01rHTkb6kQu5cbYr7QST6A0tu8SPhk9IMj2qx7L8Rti/rzQlGMEEKCTtygTprtQ/avHoGZlnMhUE/lk6QDEtOvyG/LfB9qMLJuwGG6kaE7ffKlayZmTEjSKEbEGSlxGUqoLf6VIBDkDkZo3CLLWs6nunzMHLSsLqeWvtO9Xgy80KhaYggnWNdp6VIiEzoemx/pUmH4ViiDiW1UOAbSosd2SsnMBmIy6zMgg+lC4p2EsqE2wxU3FMgbkaEcwPuRVcPWzEZp99E2UgdY+VJcB300160Lb73MUFtmYKWKhTsNZMjl9amxdu7csBrRywAboCgtDGEEsNuZgdJ2pHG26ZZZVFWtk5uxz02+elNzbCPeP70y6HBWwPxb63LlomMpYKRlaFUqNCZOmgFBXL17u2Iw7eFshENv65Y5VHjd6KsirYZeWdieVLauDWCunlTrPeIWF20bZyApmBYZmHhnSNDuPLWpW4RdsWy9+6XzllghSAYOS54RKklT5QdYrShrb2Ylk3paD+DsqhrrCckgeRKjTSelH3O0Vi0LSOw0SCVk/oM6flhtd+XShb+FdsE1oIc72jlhZ8UaE/wC6K89wHEFyuMSrM9vXXQqNFa2YPXcf0rrCJzk7Z6l/PMI8W++SANlaBsIGnUGY8qy/F8LaRs1m6zq3Iu8jyM7jWg+Fcb4f/BXWe3baGRVUoCR8TTtppuaoW41gGP8AllZ2yvcUewU12UWc7Zfo7DW29wDSQGbWOuutWCcavKIFxl8j8tCecVX8M4Xh3UOLdzUaHvbh0I3IJ0MHTmN+VJieD2QYYPr8Oa7c/r51yWSEpcU9m3CajyoIucRa9dW46C5dQQr5JcDoDE86Mu47EsJBuxMxDaEe3Kap8TwXDpcAt2yYUNrdu+I89nH2afbwVtbeZ7Lu7TKLduKASOYDkkAnYTt51qUoxaTYUZy2kW/D+MXUU23t3CrAhTkJIO+kxK6aiR5GpcB/FWGByd7bfdUJaPPxAEH941qvxWN4Vbti2HDuCZ/FuBhpENmYMPFy5RQlvH4GNFk/+9z9c1aozsI7XcPtOjZTlEBmtkAMpM8jqAMv158qt+Eg7RHon/C0T3+HKutq0oYqSX0k+XMka1ULicKdlw/+zOR853qbtor7Jg2VQNGblt5f7qmslQynxHxDQDxeu8VZpb5CB7D+lc+HmTmM9RU6UvI5xNLg8faC2w+sWwpEcxl38OugO/Wq/jNqzcgwoPei48CC4DKYLKnRdzO5qkwy38xUkHox2Plt9KJ/h7swYg+f0GlOMkS0y04heTFOxVlUWyyjvDlYzlMSVgrPSdz1q7ZrDFARZZVVgFzWyBmKnQZPL61lEtXOizz13+lStYusQUJXrtB9PvnUUHVItryaK21i2lxU7pCwf4SgkHXUBOXoaCxl7une/Za1lKA5QAzCOSiCJjoOfzo7uHvakkkcxpPQ0mHwt1vDMdJinB+aFrwX3CMOq3Gu3HRi2ZpJMhmOaRIPnVm+OseIFreZixJ6y0gHwdNKybW7gOUyCNxI18waksWm1zIWnYz4l9pginFjRp8fjrDqRnQKEZefhmNVXL0HUVAmNsZBh/DBtxm8Z1/DEk5Y/LIXy8qrmFprZHcZWj4lJb6Mx08qD7u4oDADodFI/ap07Fmnwd+zbtLazpAIJ0bWCTqPl8qnOPtyxFxRKhQYbTf79qyq37g0IB6eFPltVlbxyMutvI3kqn95pxY0P4lZtXAxtOAYgqA0GNdzqJgfKoOB5ciPf0ddrZDECNAZA8RgbmlxJuZc1qNN1Fu2Z+kzVa2Ovk/Ch8jbtfLUUUGW0an+Zpc7zLcmfCTFzQgRG/3NMxHEbVwMufwwyHRzBMciYnTpVMuJOX4Qh5gW7cH3Cz9QaEHDHYTbVidyveGT5mXkVeEiaD1xdo3QouuIX9Bg5QysDqNSH+4o7h2OtpbVFJIQ/pImJ3Gbz+lZa7g4Pitesglh7EzS2gsR3ajntofroacGLRrbfHEaSCTPkQRpHN9KAxGNHiu23uqWUqVVU8UAgAh5+s1RtZTlbUHplWoTaSYKrvtkA5+lXpN+jLml4Zo8DirSM98d5Nws5UqpiSGIBmfKkscYKhj4mXNmBMSAToI10kn5VmxZtxoibfoHT060q4e2Dpbt9P8ALXaT5eta6T9oz1V6ZpcfxG24AcXBLKQVCGCJiZ5T5ULjuKpcOW7cxBAIiQgQmPiK7TPkBO1Ub4S3ubVn3s2jy8161OtxRslka6fgWfP/AEU6L9odVemXp45bzADOSZUeBI/V6VhsRgTbxF2RKXO8dSSD8UkgwNCDy9NTV5v+S1P/AMNny/0etL3pXZbY9LVodei+lOk15RY5knfFmFwoyYe9lSScsPPKQYKxtodZ1nyqtwBW1cW46ZwviCzALDUT5T98q9E454rNqSMxa5OgXQCyVECNNTWK4tgQpkRB6f8AfatJ3cWGtKSNxa4mVRP+nXX/ANUBZ0ljPh5iT1JFVvaPiVp7R7+xlDEqClwHK0MVK5AVMlCP3pmLvB7AFy2GBd7ZUErOUWSGnkfDVJx4KMIqouVVuqoEk8rrEknzavDjwrknXn+8nsyZXTX1/eCx7M4zDolsOHzlczXAY0BuwDuIBJWDvA22rR3eP2gWnvpHxeBgFPKcggffrWQ7OuFVCzMMyKoy/wDzXpB8isj/AHVZY4/9QW/ibqKl181pc2VouOx1DgaiBVzYlLI7v+/RceRqCr+/6VvayzYdu8tu2eYdHABMqWDCPL21Hvlu62rZ3+Fo18PccQVtSsGY7tAfF1/rVV/JJts4JkMAqQNV6s3I+QnY67V68LqCR5MquTZYdnwe/Wd/4MQR7HUddaqOHlYbQ/EfzDy/01oOB4ZlxGY7DDIu/PLa0+elZ+1gXE7amd/Sqtt/omRaN4PWuzDz+VLXV1OYpKnQiRtB1HpVNj+z6mWsqCf0Hb2aDHv8xXV1RoXRBe7NhEW47Iozqp6DMEJM/wCnNHsaj4Vwy0WUmCJ9CSGUazsDI9QeW9dXVwnaPTBJq/8AB17AIWuEQvibTXTUak9BP0p9rgIJHj0Lumkx4YAO/MmurqxyZKVg1nBiHIzMRE6mAI1I6cgPU1Jh2vQ6IttpiWcMGWJYQwMa7RHvXV1TqSV/RvpxaQV2iwTYe4qKyNJuCSG/KzqNm1kCaqluXSYVbZYwIAfWdAAM29dXV15yOKxxChg8Yw0sc+SOIPu9WXC+DO5VcQRbLrc0CnMGGijVjuT78jOldXU6kmj1ZfxIQxc19Aa20Bf8WCGZR4TqASAZ5aAVHdtKVJF1piYAE+fPUb11dXVTPHKNPQBxJb1piq3FuKCNc4UnbrHPpVobAGKXW8v4iGcxNvVkJgggRDEHU6A11dUNu33A8ZeuWwFDO+WVLFnJEHKZ5AzymgLT4k3MoLqSQNcx32J8v6V1dWlFIzKbZZtfuhEDKwJAbOCYaVXw5TsdzppXfxuJUwoMGDJRWOoB0LAke1dXVznKipWH8IxWIc+NRlnfu0Gnd333A621+zQuOxWKW4yLqFiPw0OkD/T1rq6sc2a4iDFYs5Qo1JM/hJGgt6yF6nX2qywIvsoLD/8AFqLaDU3lQ8v0D6V1dVUrMtUU74/GLBIgHb8NPLovkPkKXC8TxLHeYHK2vVR+n0+VdXVHLQXcZjsU7qe8g5brKBAEA2sw+GOY50vPby3FdXVuXciegt3HchZBY3bjRrsQkbjqD8qjsWxdQ2gQx7wEgkbZTzbSfKurq6YcEZTUTnmzyjByJsVg+7FqB4cyqDpr4rp/L6ihuJt+Nd1Oty51/U337UldXLJDjko7Yp88dk+ItBr4mcuW1MBp+C37UmEwh6qvqTHvH3rS11SH/lfosu7D8NgGOY96h8IHhLToI1GUdBQa8NvroSreYOn1UV1dWq8Eu9n/2Q==" loading="lazy" alt="Chennai to Tirupati cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Tirupati</span></div><div class="route-dist">📍 145 km</div><div class="route-cta">Book Now →</div></div></a>
-      <a class="route-card" href="#" data-t="Pondicherry" aria-label="Book cab to Pondicherry 162km"><img class="route-bg" src="https://images.unsplash.com/photo-1566303052303-b2d2a9f16f0a?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0" loading="lazy" alt="Chennai to Pondicherry cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Pondicherry</span></div><div class="route-dist">📍 162 km</div><div class="route-cta">Book Now →</div></div></a>
-      <a class="route-card" href="#" data-t="Madurai"     aria-label="Book cab to Madurai 463km"><img class="route-bg" src="https://s7ap1.scene7.com/is/image/incredibleindia/meenakshi-amman-temple-madurai-tamil-nadu-1-attr-hero?qlt=82&ts=1726654436739" loading="lazy" alt="Chennai to Madurai cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Madurai</span></div><div class="route-dist">📍 463 km</div><div class="route-cta">Book Now →</div></div></a>
-      <a class="route-card" href="#" data-t="Ooty"        aria-label="Book cab to Ooty 546km"><img class="route-bg" src="https://t3.ftcdn.net/jpg/05/09/58/00/360_F_509580096_YjyHXMHyTm9OOkjUQS4kOxDXkxbOMWYi.jpg" loading="lazy" alt="Chennai to Ooty cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Ooty</span></div><div class="route-dist">📍 546 km</div><div class="route-cta">Book Now →</div></div></a>
-      <a class="route-card" href="#" data-t="Coimbatore"  aria-label="Book cab to Coimbatore 497km"><img class="route-bg" src="https://images.unsplash.com/photo-1561006289-4fe1a09bf743?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0" loading="lazy" alt="Chennai to Coimbatore cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Coimbatore</span></div><div class="route-dist">📍 497 km</div><div class="route-cta">Book Now →</div></div></a>
-      <a class="route-card" href="#" data-t="Rameswaram"  aria-label="Book cab to Rameswaram 575km"><img class="route-bg" src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=500&q=80" loading="lazy" alt="Chennai to Rameswaram cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Rameswaram</span></div><div class="route-dist">📍 575 km</div><div class="route-cta">Book Now →</div></div></a>
-      <a class="route-card" href="#" data-t="Kodaikanal"  aria-label="Book cab to Kodaikanal 520km"><img class="route-bg" src="https://hblimg.mmtcdn.com/content/hubble/img/destimg/mmt/activities/m_Kodaikanal_destjulimg_2_l_730_1094.jpg" loading="lazy" alt="Chennai to Kodaikanal cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Kodaikanal</span></div><div class="route-dist">📍 520 km</div><div class="route-cta">Book Now →</div></div></a>
-      <a class="route-card" href="#" data-t="Trichy"      aria-label="Book cab to Trichy 332km"><img class="route-bg" src="https://www.trichyproperty.in/wp-content/uploads/2023/08/Trichy-rockfort-bg.webp" loading="lazy" alt="Chennai to Trichy cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Trichy</span></div><div class="route-dist">📍 332 km</div><div class="route-cta">Book Now →</div></div></a>
-      <a class="route-card" href="#" data-t="Kanyakumari" aria-label="Book cab to Kanyakumari 694km"><img class="route-bg" src="https://footloosedev.com/wp-content/uploads/2016/04/kanyakumari-e1736840394191.jpg" loading="lazy" alt="Chennai to Kanyakumari cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Kanyakumari</span></div><div class="route-dist">📍 694 km</div><div class="route-cta">Book Now →</div></div></a>
+      <a class="route-card" href="#" data-t="Bangalore" aria-label="Book cab to Bangalore 347km"><img class="route-bg" src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=500&q=80" loading="lazy" alt="Chennai to Bangalore cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Bangalore</span></div><div class="route-dist">📍 347 km</div><div class="route-cta">Book Now →</div></div></a>
+      <a class="route-card" href="#" data-t="Tirupati" aria-label="Book cab to Tirupati 145km"><img class="route-bg" src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=500&q=80" loading="lazy" alt="Chennai to Tirupati cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Tirupati</span></div><div class="route-dist">📍 145 km</div><div class="route-cta">Book Now →</div></div></a>
+      <a class="route-card" href="#" data-t="Pondicherry" aria-label="Book cab to Pondicherry 162km"><img class="route-bg" src="https://images.unsplash.com/photo-1566303052303-b2d2a9f16f0a?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9uZGljaGVycnklMjBiZWFjaHxlbnwwfHwwfHx8MA%3D%3D" loading="lazy" alt="Chennai to Pondicherry cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Pondicherry</span></div><div class="route-dist">📍 162 km</div><div class="route-cta">Book Now →</div></div></a>
+      <a class="route-card" href="#" data-t="Madurai" aria-label="Book cab to Madurai 463km"><img class="route-bg" src="https://images.unsplash.com/photo-1612965607446-25e1332775ae?w=500&q=80" loading="lazy" alt="Chennai to Madurai cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Madurai</span></div><div class="route-dist">📍 463 km</div><div class="route-cta">Book Now →</div></div></a>
+      <a class="route-card" href="#" data-t="Ooty" aria-label="Book cab to Ooty 546km"><img class="route-bg" src="https://t3.ftcdn.net/jpg/05/09/58/00/360_F_509580096_YjyHXMHyTm9OOkjUQS4kOxDXkxbOMWYi.jpg" loading="lazy" alt="Chennai to Ooty cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Ooty</span></div><div class="route-dist">📍 546 km</div><div class="route-cta">Book Now →</div></div></a>
+      <a class="route-card" href="#" data-t="Coimbatore" aria-label="Book cab to Coimbatore 497km"><img class="route-bg" src="https://images.unsplash.com/photo-1561006289-4fe1a09bf743?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" alt="Chennai to Coimbatore cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Coimbatore</span></div><div class="route-dist">📍 497 km</div><div class="route-cta">Book Now →</div></div></a>
+      <a class="route-card" href="#" data-t="Rameswaram" aria-label="Book cab to Rameswaram 575km"><img class="route-bg" src="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=500&q=80" loading="lazy" alt="Chennai to Rameswaram cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Rameswaram</span></div><div class="route-dist">📍 575 km</div><div class="route-cta">Book Now →</div></div></a>
+      <a class="route-card" href="#" data-t="Kodaikanal" aria-label="Book cab to Kodaikanal 520km"><img class="route-bg" src="https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=500&q=80" loading="lazy" alt="Chennai to Kodaikanal cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Kodaikanal</span></div><div class="route-dist">📍 520 km</div><div class="route-cta">Book Now →</div></div></a>
+      <a class="route-card" href="#" data-t="Trichy" aria-label="Book cab to Trichy 332km"><img class="route-bg" src="https://images.unsplash.com/photo-1614519738232-27ba94d26403?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" alt="Chennai to Trichy cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Trichy</span></div><div class="route-dist">📍 332 km</div><div class="route-cta">Book Now →</div></div></a>
+      <a class="route-card" href="#" data-t="Kanyakumari" aria-label="Book cab to Kanyakumari 694km"><img class="route-bg" src="https://images.unsplash.com/photo-1570789210967-2cac24afeb00?w=500&q=80" loading="lazy" alt="Chennai to Kanyakumari cab"><div class="route-overlay"></div><div class="route-content"><div class="route-cities"><span class="route-from">Chennai</span><span class="route-arrow">→</span><span class="route-to">Kanyakumari</span></div><div class="route-dist">📍 694 km</div><div class="route-cta">Book Now →</div></div></a>
     </div>
   </div>
 </section>
@@ -325,43 +431,30 @@
   </div>
 </div>
 
-<!-- TESTIMONIALS — Supabase powered -->
+<!-- TESTIMONIALS -->
 <section class="section sec-alt" id="testimonials" aria-labelledby="reviews-heading">
   <div class="container">
-
     <div class="sec-head center reveal">
       <span class="sec-label">Real Reviews</span>
       <h2 class="sec-title" id="reviews-heading">What Our <em>Passengers</em> Say</h2>
-      <p class="sec-sub">Over 5,000 happy travellers trust Super J Travels for cabs across Tamil Nadu every month.</p>
+      <p class="sec-sub">Over 5000 happy travellers trust Super J Travels for cabs across Tamil Nadu every month.</p>
     </div>
-
-    <!-- Aggregate bar — filled by JS -->
-    <div id="homeAggBar" style="display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem;opacity:0;transition:opacity .4s"></div>
-
-    <!-- Slider -->
     <div class="t-outer">
       <div class="t-track" id="tTrack">
-        <!-- Skeletons while loading -->
-        <div class="t-card" style="min-width:340px"><div style="display:flex;flex-direction:column;gap:.75rem"><div class="skel skel-line w40" style="height:14px"></div><div class="skel skel-line" style="height:11px"></div><div class="skel skel-line w80" style="height:11px"></div><div class="skel skel-line w60" style="height:11px"></div><div style="display:flex;gap:.75rem;align-items:center;margin-top:.5rem"><div class="skel" style="width:40px;height:40px;border-radius:50%;flex-shrink:0"></div><div style="display:flex;flex-direction:column;gap:6px;flex:1"><div class="skel skel-line w60" style="height:11px"></div><div class="skel skel-line w40" style="height:10px"></div></div></div></div></div>
-        <div class="t-card" style="min-width:340px"><div style="display:flex;flex-direction:column;gap:.75rem"><div class="skel skel-line w40" style="height:14px"></div><div class="skel skel-line" style="height:11px"></div><div class="skel skel-line w80" style="height:11px"></div><div style="display:flex;gap:.75rem;align-items:center;margin-top:.5rem"><div class="skel" style="width:40px;height:40px;border-radius:50%;flex-shrink:0"></div><div style="display:flex;flex-direction:column;gap:6px;flex:1"><div class="skel skel-line w60" style="height:11px"></div></div></div></div></div>
-        <div class="t-card" style="min-width:340px"><div style="display:flex;flex-direction:column;gap:.75rem"><div class="skel skel-line w40" style="height:14px"></div><div class="skel skel-line" style="height:11px"></div><div class="skel skel-line w60" style="height:11px"></div><div style="display:flex;gap:.75rem;align-items:center;margin-top:.5rem"><div class="skel" style="width:40px;height:40px;border-radius:50%;flex-shrink:0"></div><div style="display:flex;flex-direction:column;gap:6px;flex:1"><div class="skel skel-line w60" style="height:11px"></div></div></div></div></div>
+        <div class="t-card active"><div class="t-header"><div class="t-stars">★★★★★</div><div class="t-quote">"</div></div><p class="t-text">Booked an Innova Crysta for a Tirupati family trip. Driver was punctual, vehicle spotlessly clean, and pricing was exactly as quoted. No hidden charges at all!</p><div class="t-author"><div class="t-avatar" style="background:#1058C7">R</div><div><div class="t-name">Rajesh Kumar</div><div class="t-loc">📍 Chennai</div></div></div></div>
+        <div class="t-card"><div class="t-header"><div class="t-stars">★★★★★</div><div class="t-quote">"</div></div><p class="t-text">Super J Travels handled our airport transfer at 4 AM. The driver arrived early, helped with luggage, and was extremely professional. Highly recommended!</p><div class="t-author"><div class="t-avatar" style="background:#7B1FA2">P</div><div><div class="t-name">Priya Nair</div><div class="t-loc">📍 Bangalore</div></div></div></div>
+        <div class="t-card"><div class="t-header"><div class="t-stars">★★★★★</div><div class="t-quote">"</div></div><p class="t-text">Used a Tempo Traveller for our company outing. Excellent condition, on-time throughout, and the driver knew all the routes perfectly. Will definitely book again.</p><div class="t-author"><div class="t-avatar" style="background:#2E7D32">V</div><div><div class="t-name">Vijay Sundar</div><div class="t-loc">📍 Trichy</div></div></div></div>
+        <div class="t-card"><div class="t-header"><div class="t-stars">★★★★★</div><div class="t-quote">"</div></div><p class="t-text">Arranged wedding cars for our family function. The fleet was beautifully maintained. Lenin sir personally ensured everything was seamless. Outstanding service!</p><div class="t-author"><div class="t-avatar" style="background:#C62828">M</div><div><div class="t-name">Meena Subramanian</div><div class="t-loc">📍 Madurai</div></div></div></div>
+        <div class="t-card"><div class="t-header"><div class="t-stars">★★★★★</div><div class="t-quote">"</div></div><p class="t-text">Regular corporate rentals with Super J Travels. Consistent quality, professional drivers, and billing is always transparent. Our company's go-to travel partner.</p><div class="t-author"><div class="t-avatar" style="background:#E65100">A</div><div><div class="t-name">Arun Krishnamurthy</div><div class="t-loc">📍 Coimbatore</div></div></div></div>
       </div>
     </div>
-
     <div class="t-controls">
       <button class="t-arrow" id="tPrev" aria-label="Previous review">&#8592;</button>
       <div class="t-dots" id="tDots" role="tablist"></div>
       <button class="t-arrow" id="tNext" aria-label="Next review">&#8594;</button>
     </div>
-
-    <!-- View all — shown only when total > HOME_LIMIT -->
-    <div id="viewAllWrap" style="text-align:center;margin-top:2rem;display:none">
-      <a href="reviews.html" class="btn btn-outline">⭐ Read All Reviews</a>
-      <p style="font-size:.75rem;color:var(--muted);margin-top:.625rem" id="viewAllSub"></p>
-    </div>
-
   </div>
-</section><!-- ← THIS WAS THE MISSING CLOSING TAG -->
+</section>
 
 <!-- CONTACT -->
 <section class="section" id="contact" aria-labelledby="contact-heading">
@@ -376,7 +469,7 @@
         <div class="c-card reveal"><div class="c-icon">📞</div><div><div class="c-label">Phone / WhatsApp</div><a href="tel:+919092432647" class="c-val" style="color:var(--navy)">+91 90924 32647 , 04435749287</a><div class="c-sub">Available 24/7 — call anytime</div></div></div>
         <div class="c-card reveal"><div class="c-icon">💬</div><div><div class="c-label">WhatsApp</div><a href="#" class="c-val" style="color:var(--blue)" id="contactWa">Chat with us instantly</a><div class="c-sub">Instant quote in under 2 minutes</div></div></div>
         <div class="c-card reveal"><div class="c-icon">✉️</div><div><div class="c-label">Email</div><a href="mailto:superjtravels@gmail.com" class="c-val" style="color:var(--navy)">superjtravels@gmail.com</a><div class="c-sub">For bookings, invoices &amp; enquiries</div></div></div>
-        <a href="https://maps.app.goo.gl/DMRi4wqDMGU2T3ABA" target="_blank" rel="noopener noreferrer"><div class="c-card reveal"><div class="c-icon">📍</div><div><div class="c-label">Base Location</div><div class="c-val">Korattur / Ambattur, Chennai</div><div class="c-sub">Serving Tamil Nadu &amp; South India</div></div></div></a>
+       <a href="https://maps.app.goo.gl/DMRi4wqDMGU2T3ABA" target="_blank" rel="noopener noreferrer"><div class="c-card reveal"><div class="c-icon">📍</div><div><div class="c-label">Base Location</div><div class="c-val">Korattur / Ambattur, Chennai</div><div class="c-sub">Serving Tamil Nadu &amp; South India</div></div></div></a>
       </div>
       <div class="contact-form reveal">
         <div class="form-title">Quick Booking Enquiry</div>
@@ -415,7 +508,7 @@
           <a href="#services" title="Airport transfer cab Chennai">Airport Transfer Cab Chennai</a>
           <a href="#services" title="Corporate cab rental Chennai">Corporate Cab Rental Chennai</a>
           <a href="#services" title="Wedding car hire Chennai">Wedding Car Hire Chennai</a>
-          <a href="#services" title="One way cab Chennai to Bangalore">Cab Chennai to Bangalore</a>
+          <a href="#services" title="One way cab Chennai to Bangalore"> Cab Chennai to Bangalore</a>
           <a href="#fleet"    title="Innova Crysta hire Chennai">Innova Crysta Hire Chennai</a>
           <a href="#fleet"    title="Tempo traveller hire Chennai">Tempo Traveller Hire Chennai</a>
           <a href="#services" title="Pilgrimage cab service Tamil Nadu">Pilgrimage Cab Service Tamil Nadu</a>
@@ -442,8 +535,8 @@
           <a href="mailto:superjtravels@gmail.com" title="Email Super J Travels">superjtravels@gmail.com</a>
           <a href="https://maps.google.com/?q=Korattur+Chennai+Cab+Service" target="_blank" rel="noopener" title="Cab service Chennai Google Maps">Find Us on Google Maps</a>
           <a href="#contact" title="Contact Super J Travels">Send a Booking Enquiry</a>
-          <a href="#fleet"   title="View all cabs and buses">View Full Fleet</a>
-          <a href="reviews.html" title="Customer reviews Super J Travels">Read Customer Reviews</a>
+          <a href="#fleet" title="View all cabs and buses">View Full Fleet</a>
+          <a href="#testimonials" title="Customer reviews Super J Travels">Read Customer Reviews</a>
         </div>
       </div>
     </div>
@@ -466,7 +559,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#fleet">Fleet</a></li>
           <li><a href="#routes">Routes</a></li>
-          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -488,7 +581,7 @@
           <li class="footer-contact-row"><span>📞</span><a href="tel:+919092432647">+91 90924 32647 , 04435749287</a></li>
           <li class="footer-contact-row"><span>💬</span><a href="#" id="footerWa2">WhatsApp Us</a></li>
           <li class="footer-contact-row"><span>✉️</span><a href="mailto:superjtravels@gmail.com">superjtravels@gmail.com</a></li>
-          <a href="https://maps.app.goo.gl/DMRi4wqDMGU2T3ABA" target="_blank" rel="noopener noreferrer"><li class="footer-contact-row"><span>📍</span><span style="color:rgba(255,255,255,.5);font-size:.78rem">Korattur / Ambattur, Chennai, TN</span></li></a>
+           <a href="https://maps.app.goo.gl/DMRi4wqDMGU2T3ABA"><li class="footer-contact-row"><span>📍</span><span style="color:rgba(255,255,255,.5);font-size:.78rem">Korattur / Ambattur, Chennai, TN</span></li></a>
         </ul>
       </div>
     </div>
