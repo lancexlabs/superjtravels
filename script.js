@@ -1,53 +1,68 @@
-const WA = '919092432647';
-const waUrl = msg => `https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent(msg)}`;
-const defaultMsg = "Hi Super J Travels! I'd like to book a cab.";
+/* ═══════════════════════════════════════════════════════
+   SUPER J TRAVELS — script.js
+   Single, clean file. No duplicates.
+═══════════════════════════════════════════════════════ */
 
-// Wire all WA links
+/* ── Supabase config ── */
+const SUPABASE_URL      = 'https://viunpmfhxomnvpepjgfh.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZpdW5wbWZoeG9tbnZwZXBqZ2ZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwMTIxMzgsImV4cCI6MjA4OTU4ODEzOH0.0qm7tPW2RHBMXXabCnDNkGJnP0IaIEG4hiY0pDRT080';
+const HOME_LIMIT        = 6; // reviews shown in homepage slider
+
+/* ── WhatsApp ── */
+const WA          = '919092432647';
+const waUrl = msg => `https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent(msg)}`;
+const defaultMsg  = "Hi Super J Travels! I'd like to book a cab.";
+
+// Wire all static WA links
 ['navWa','mobileWa','heroWa','svcWa','ctaWa','contactWa','footerWa','footerWa2','floatWa'].forEach(id => {
   const el = document.getElementById(id);
   if (!el) return;
-  el.href = waUrl(defaultMsg); el.target = '_blank'; el.rel = 'noopener noreferrer';
+  el.href = waUrl(defaultMsg);
+  el.target = '_blank';
+  el.rel = 'noopener noreferrer';
 });
 
-// Fleet buttons
+// Fleet book buttons
 document.querySelectorAll('.fleet-btn').forEach(btn => {
-  btn.href = waUrl(`Hi Super J Travels! I'd like to book a ${btn.dataset.v}.`);
-  btn.target = '_blank'; btn.rel = 'noopener noreferrer';
+  btn.href   = waUrl(`Hi Super J Travels! I'd like to book a ${btn.dataset.v}.`);
+  btn.target = '_blank';
+  btn.rel    = 'noopener noreferrer';
 });
 
 // Route cards
 document.querySelectorAll('.route-card').forEach(card => {
-  card.href = waUrl(`Hi! I'd like to book a cab from ${card.dataset.f} to ${card.dataset.t}.`);
-  card.target = '_blank'; card.rel = 'noopener noreferrer';
+  card.href   = waUrl(`Hi! I'd like to book a cab from Chennai to ${card.dataset.t}.`);
+  card.target = '_blank';
+  card.rel    = 'noopener noreferrer';
 });
 
-// Hero inline form
+// Hero inline booking form
 document.getElementById('hcSubmit').addEventListener('click', () => {
-  const n = document.getElementById('hcName').value.trim();
-  const p = document.getElementById('hcPhone').value.trim();
-  const pu= document.getElementById('hcPickup').value.trim();
-  const d = document.getElementById('hcDrop').value.trim();
-  const v = document.getElementById('hcVehicle').value.trim();
+  const n  = document.getElementById('hcName').value.trim();
+  const p  = document.getElementById('hcPhone').value.trim();
+  const pu = document.getElementById('hcPickup').value.trim();
+  const d  = document.getElementById('hcDrop').value.trim();
+  const v  = document.getElementById('hcVehicle').value.trim();
   if (!n || !p) { alert('Please enter your name and phone number.'); return; }
-  const parts = [`Hi Super J Travels!`,`Name: ${n}`,`Phone: ${p}`,
-    pu&&`Pickup: ${pu}`,d&&`Drop: ${d}`,v&&`Vehicle: ${v}`];
+  const parts = [`Hi Super J Travels!`, `Name: ${n}`, `Phone: ${p}`,
+    pu && `Pickup: ${pu}`, d && `Drop: ${d}`, v && `Vehicle: ${v}`];
   window.open(waUrl(parts.filter(Boolean).join('\n')), '_blank', 'noopener,noreferrer');
 });
 
 // Contact form
 document.getElementById('formBtn').addEventListener('click', () => {
-  const n = document.getElementById('fName').value.trim();
-  const p = document.getElementById('fPhone').value.trim();
-  const pu= document.getElementById('fPickup').value.trim();
-  const d = document.getElementById('fDrop').value.trim();
-  const v = document.getElementById('fVehicle').value.trim();
+  const n  = document.getElementById('fName').value.trim();
+  const p  = document.getElementById('fPhone').value.trim();
+  const pu = document.getElementById('fPickup').value.trim();
+  const d  = document.getElementById('fDrop').value.trim();
+  const v  = document.getElementById('fVehicle').value.trim();
   if (!n || !p) { alert('Please enter your name and phone number.'); return; }
-  const parts = [`Hi Super J Travels!`,`Name: ${n}`,`Phone: ${p}`,
-    pu&&`Pickup: ${pu}`,d&&`Drop: ${d}`,v&&`Vehicle: ${v}`];
+  const parts = [`Hi Super J Travels!`, `Name: ${n}`, `Phone: ${p}`,
+    pu && `Pickup: ${pu}`, d && `Drop: ${d}`, v && `Vehicle: ${v}`];
   window.open(waUrl(parts.filter(Boolean).join('\n')), '_blank', 'noopener,noreferrer');
 });
 
-// Navbar scroll + active link
+/* ── Navbar scroll + active link highlight ── */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 20);
@@ -56,16 +71,16 @@ window.addEventListener('scroll', () => {
     const link = document.querySelector(`.nav-link[href="#${s.id}"]`);
     if (link) link.classList.toggle('active', pos >= s.offsetTop && pos < s.offsetTop + s.offsetHeight);
   });
-}, {passive:true});
+}, { passive: true });
 
-// Hamburger
+/* ── Hamburger menu ── */
 const hamburger = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobileNav');
 function closeMenu() {
   hamburger.classList.remove('open');
   mobileNav.classList.remove('open');
-  hamburger.setAttribute('aria-expanded','false');
-  mobileNav.setAttribute('aria-hidden','true');
+  hamburger.setAttribute('aria-expanded', 'false');
+  mobileNav.setAttribute('aria-hidden', 'true');
 }
 hamburger.addEventListener('click', () => {
   const open = hamburger.classList.toggle('open');
@@ -77,136 +92,22 @@ document.addEventListener('click', e => {
   if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) closeMenu();
 });
 
-// Testimonial carousel
-let tIdx = 0;
-const tCards = [...document.querySelectorAll('.t-card')];
-const tTrack = document.getElementById('tTrack');
-const tDots  = document.getElementById('tDots');
-tCards.forEach((_, i) => {
-  const d = document.createElement('button');
-  d.className = 't-dot' + (i === 0 ? ' active' : '');
-  d.setAttribute('aria-label', `Go to review ${i + 1}`);
-  d.setAttribute('role', 'tab');
-  d.onclick = () => goT(i);
-  tDots.appendChild(d);
-});
-function goT(i) {
-  tIdx = (i + tCards.length) % tCards.length;
-  tCards.forEach((c, j) => c.classList.toggle('active', j === tIdx));
-  const gap = 20;
-  const cardW = tCards[0] ? tCards[0].offsetWidth : 340;
-  tTrack.style.transform = `translateX(-${tIdx * (cardW + gap)}px)`;
-  document.querySelectorAll('.t-dot').forEach((d, j) => d.classList.toggle('active', j === tIdx));
-}
-document.getElementById('tPrev').onclick = () => goT(tIdx - 1);
-document.getElementById('tNext').onclick = () => goT(tIdx + 1);
-setInterval(() => goT(tIdx + 1), 5500);
-window.addEventListener('resize', () => goT(tIdx)); // recalc on resize
-
-// Scroll reveal
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
-}, {threshold:0.08, rootMargin:'0px 0px -32px 0px'});
-document.querySelectorAll('.reveal, .stagger').forEach(el => observer.observe(el));
-
-/* ═══════════════════════════════════════════════════════
-   FLEET SLIDESHOW — Add this block inside script.js
-   (or paste at the bottom of your existing script.js)
-
-   Also works standalone — just make sure it runs after DOM load.
-   ═══════════════════════════════════════════════════════ */
-
+/* ── Fleet slideshows ── */
 (function initFleetSlideshows() {
-  const WA_NUMBER = '919092432647';
-
   document.querySelectorAll('.fleet-cat-card').forEach(card => {
-    const ss      = card.querySelector('.fcc-slideshow');
+    const wrap    = card.querySelector('.fcc-slideshow');
+    const strip   = card.querySelector('.fcc-slides');
     const slides  = card.querySelectorAll('.fcc-slide');
-    const track   = card.querySelector('.fcc-slides');
-    const dotsWrap= card.querySelector('.fcc-dots');
+    const dotsEl  = card.querySelector('.fcc-dots');
     const prevBtn = card.querySelector('.fcc-prev');
     const nextBtn = card.querySelector('.fcc-next');
     const bookBtn = card.querySelector('.fcc-book-btn');
-
-    let current = 0;
-    let autoTimer = null;
-    const total = slides.length;
-
-    /* Build dots */
-    slides.forEach((_, i) => {
-      const d = document.createElement('button');
-      d.className = 'fcc-dot' + (i === 0 ? ' active' : '');
-      d.setAttribute('aria-label', `Go to slide ${i + 1}`);
-      d.addEventListener('click', () => goTo(i));
-      dotsWrap.appendChild(d);
-    });
-
-    function goTo(idx) {
-      slides[current].classList.remove('active');
-      dotsWrap.children[current].classList.remove('active');
-      current = (idx + total) % total;
-      track.style.transform = `translateX(-${current * 100}%)`;
-      slides[current].classList.add('active');
-      dotsWrap.children[current].classList.add('active');
-    }
-
-    function startAuto() {
-      stopAuto();
-      autoTimer = setInterval(() => goTo(current + 1), 3200);
-    }
-    function stopAuto() {
-      if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
-    }
-
-    prevBtn.addEventListener('click', () => { goTo(current - 1); startAuto(); });
-    nextBtn.addEventListener('click', () => { goTo(current + 1); startAuto(); });
-
-    ss.addEventListener('mouseenter', stopAuto);
-    ss.addEventListener('mouseleave', startAuto);
-
-    /* Touch / swipe support */
-    let touchX = 0;
-    ss.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
-    ss.addEventListener('touchend',   e => {
-      const dx = e.changedTouches[0].clientX - touchX;
-      if (Math.abs(dx) > 40) { dx < 0 ? goTo(current + 1) : goTo(current - 1); startAuto(); }
-    }, { passive: true });
-
-    startAuto();
-
-    /* WhatsApp booking */
-    if (bookBtn) {
-      bookBtn.addEventListener('click', e => {
-        e.preventDefault();
-        const vehicle = bookBtn.dataset.v || 'a vehicle';
-        const msg = encodeURIComponent(
-          `Hi Super J Travels! I'd like to book ${vehicle}. Please share availability and pricing.`
-        );
-        window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank');
-      });
-    }
-  });
-})();
-/* ═══════════════════════════════════════════════════════════════
-   FLEET SLIDESHOW JS — paste at bottom of script.js
-   ═══════════════════════════════════════════════════════════════ */
-
-(function initFleetSlideshows() {
-  const WA = '919092432647';
-
-  document.querySelectorAll('.fleet-cat-card').forEach(card => {
-    const wrap   = card.querySelector('.fcc-slideshow');
-    const strip  = card.querySelector('.fcc-slides');
-    const slides = card.querySelectorAll('.fcc-slide');
-    const dotsEl = card.querySelector('.fcc-dots');
-    const prev   = card.querySelector('.fcc-prev');
-    const next   = card.querySelector('.fcc-next');
-    const bookBtn= card.querySelector('.fcc-book-btn');
+    if (!wrap || !strip || !slides.length) return;
 
     let cur = 0, timer = null;
     const total = slides.length;
 
-    /* Build dots */
+    // Build dots
     slides.forEach((_, i) => {
       const d = document.createElement('button');
       d.className = 'fcc-dot' + (i === 0 ? ' active' : '');
@@ -227,24 +128,22 @@ document.querySelectorAll('.reveal, .stagger').forEach(el => observer.observe(el
       timer = setInterval(() => go(cur + 1), 3500);
     }
 
-    prev.addEventListener('click', () => { go(cur - 1); resetAuto(); });
-    next.addEventListener('click', () => { go(cur + 1); resetAuto(); });
-
-    /* Pause on hover */
+    prevBtn.addEventListener('click', () => { go(cur - 1); resetAuto(); });
+    nextBtn.addEventListener('click', () => { go(cur + 1); resetAuto(); });
     wrap.addEventListener('mouseenter', () => clearInterval(timer));
     wrap.addEventListener('mouseleave', resetAuto);
 
-    /* Touch swipe */
+    // Touch swipe
     let tx = 0;
     wrap.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
-    wrap.addEventListener('touchend',   e => {
+    wrap.addEventListener('touchend', e => {
       const dx = e.changedTouches[0].clientX - tx;
       if (Math.abs(dx) > 40) { dx < 0 ? go(cur + 1) : go(cur - 1); resetAuto(); }
     }, { passive: true });
 
     resetAuto();
 
-    /* WhatsApp booking */
+    // WhatsApp book button
     if (bookBtn) {
       bookBtn.addEventListener('click', e => {
         e.preventDefault();
@@ -255,3 +154,169 @@ document.querySelectorAll('.reveal, .stagger').forEach(el => observer.observe(el
     }
   });
 })();
+
+/* ── Scroll reveal ── */
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+document.querySelectorAll('.reveal, .stagger').forEach(el => revealObserver.observe(el));
+
+/* ═══════════════════════════════════════════════════════
+   SUPABASE REVIEWS — Homepage Slider
+   Fetches 6 latest approved reviews, injects into
+   the .t-track slider, shows "View All" if total > 6.
+═══════════════════════════════════════════════════════ */
+
+async function supaGet(path) {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/${path}`, {
+    headers: {
+      'apikey': SUPABASE_ANON_KEY,
+      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+    }
+  });
+  if (!res.ok) throw new Error(res.status);
+  return res.json();
+}
+
+const AV_COLORS  = ['#1058C7','#7B1FA2','#2E7D32','#C62828','#E65100','#0277BD','#558B2F','#6A1B9A','#00695C','#D81B60'];
+const TYPE_EMOJI = { outstation:'🗺️', airport:'✈️', pilgrimage:'🕌', wedding:'💍', corporate:'🏢', group:'🚌' };
+
+function avColor(name) {
+  let h = 0;
+  for (let i = 0; i < name.length; i++) h = (h * 31 + name.charCodeAt(i)) & 0xffffffff;
+  return AV_COLORS[Math.abs(h) % AV_COLORS.length];
+}
+
+function buildTCard(r, isActive) {
+  const init  = (r.name || 'A')[0].toUpperCase();
+  const col   = avColor(r.name || 'A');
+  const emoji = TYPE_EMOJI[r.trip_type] || '⭐';
+  const stars = '★'.repeat(r.stars) + '☆'.repeat(5 - r.stars);
+  const date  = new Date(r.created_at).toLocaleDateString('en-IN', { month: 'short', year: 'numeric' });
+  return `
+  <div class="t-card${isActive ? ' active' : ''}">
+    <div class="t-header">
+      <div class="t-stars">${stars}</div>
+      <div class="t-quote">"</div>
+    </div>
+    <p class="t-text">${r.review_text}</p>
+    ${r.route ? `<p style="font-size:.68rem;color:var(--blue);font-weight:600;margin-top:-.25rem">${emoji} ${r.route}</p>` : ''}
+    <div class="t-author">
+      <div class="t-avatar" style="background:${col}">${init}</div>
+      <div>
+        <div class="t-name">${r.name}</div>
+        <div class="t-loc">📍 ${r.location || 'Chennai'} · ${date}</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderAggBar(total, avg) {
+  const bar = document.getElementById('homeAggBar');
+  if (!bar) return;
+  bar.innerHTML = `
+    <div style="display:flex;align-items:center;gap:.625rem">
+      <span style="font-family:'Inter',sans-serif;font-size:2rem;font-weight:900;color:var(--amber)">${avg}</span>
+      <div>
+        <div style="color:var(--amber);font-size:1rem;letter-spacing:2px">★★★★★</div>
+        <div style="font-size:.72rem;color:var(--muted);font-weight:500">${total} verified reviews</div>
+      </div>
+    </div>
+    <div style="width:1px;height:36px;background:var(--border)"></div>
+    <a href="reviews.html"
+       style="font-size:.78rem;font-weight:700;color:var(--blue);text-decoration:none;
+              padding:.375rem .875rem;border:1.5px solid rgba(16,88,199,.2);border-radius:9999px;
+              transition:all .2s;background:#fff"
+       onmouseover="this.style.background='var(--blue)';this.style.color='#fff'"
+       onmouseout="this.style.background='#fff';this.style.color='var(--blue)'">
+      Read All ${total} Reviews →
+    </a>`;
+  bar.style.opacity = '1';
+}
+
+/* Slider init — called after Supabase cards are injected */
+function initSlider() {
+  const track  = document.getElementById('tTrack');
+  const dotsEl = document.getElementById('tDots');
+  const prev   = document.getElementById('tPrev');
+  const next   = document.getElementById('tNext');
+  if (!track || !dotsEl || !prev || !next) return;
+
+  const cards = track.querySelectorAll('.t-card');
+  if (cards.length === 0) return;
+
+  let current = 0;
+  let autoTimer;
+
+  // Build dots
+  dotsEl.innerHTML = '';
+  cards.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 't-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('role', 'tab');
+    d.setAttribute('aria-label', `Review ${i + 1}`);
+    d.addEventListener('click', () => go(i));
+    dotsEl.appendChild(d);
+  });
+
+  function go(n) {
+    cards[current].classList.remove('active');
+    dotsEl.children[current].classList.remove('active');
+    current = (n + cards.length) % cards.length;
+    cards[current].classList.add('active');
+    dotsEl.children[current].classList.add('active');
+    const cardW = cards[0].offsetWidth + 20;
+    track.style.transform = `translateX(-${current * cardW}px)`;
+  }
+
+  function startAuto() { autoTimer = setInterval(() => go(current + 1), 4500); }
+  function stopAuto()  { clearInterval(autoTimer); }
+
+  prev.addEventListener('click', () => { stopAuto(); go(current - 1); startAuto(); });
+  next.addEventListener('click', () => { stopAuto(); go(current + 1); startAuto(); });
+  window.addEventListener('resize', () => go(current)); // recalc on resize
+  startAuto();
+}
+
+async function loadHomeReviews() {
+  try {
+    const [latest, allApproved, statsArr] = await Promise.all([
+      supaGet(`reviews?approved=eq.true&order=created_at.desc&limit=${HOME_LIMIT}&select=*`),
+      supaGet(`reviews?approved=eq.true&select=id`),
+      supaGet(`review_stats?select=*`)
+    ]);
+
+    const totalCount = allApproved.length;
+    const stats      = statsArr[0];
+    const avg        = stats
+      ? stats.avg_rating
+      : (latest.reduce((s, r) => s + r.stars, 0) / Math.max(latest.length, 1)).toFixed(1);
+
+    // Inject cards
+    const track = document.getElementById('tTrack');
+    if (track && latest.length > 0) {
+      track.innerHTML = latest.map((r, i) => buildTCard(r, i === 0)).join('');
+    }
+
+    renderAggBar(totalCount, avg);
+
+    // "View all" button
+    if (totalCount > HOME_LIMIT) {
+      const wrap = document.getElementById('viewAllWrap');
+      const sub  = document.getElementById('viewAllSub');
+      if (wrap) wrap.style.display = 'block';
+      if (sub)  sub.textContent = `Showing ${HOME_LIMIT} of ${totalCount} reviews — see all on the reviews page`;
+    }
+
+    initSlider();
+
+  } catch (err) {
+    console.error('Home reviews load failed:', err);
+    // On failure: init slider with whatever skeleton/fallback cards are in the DOM
+    initSlider();
+  }
+}
+
+loadHomeReviews();
