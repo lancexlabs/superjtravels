@@ -7,6 +7,7 @@
 const SUPABASE_URL      = 'https://viunpmfhxomnvpepjgfh.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZpdW5wbWZoeG9tbnZwZXBqZ2ZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwMTIxMzgsImV4cCI6MjA4OTU4ODEzOH0.0qm7tPW2RHBMXXabCnDNkGJnP0IaIEG4hiY0pDRT080';
 const HOME_LIMIT        = 6; // reviews shown in homepage slider
+
 /* ── WhatsApp ── */
 const WA          = '919092432647';
 const waUrl = msg => `https://api.whatsapp.com/send?phone=${WA}&text=${encodeURIComponent(msg)}`;
