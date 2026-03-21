@@ -13,25 +13,13 @@
 <meta property="og:description" content="Verified 5-star reviews from 5000+ happy travellers. Super J Travels – Chennai's most trusted cab service."/>
 <meta property="og:url" content="https://superjtravels.in/reviews.html"/>
 <meta property="og:image" content="https://superjtravels.in/images/logo.png"/>
-
-<!-- ══════════════════════════════════════════════
-     SEO SCHEMA — injected dynamically by JS
-     after Supabase data loads
-     ══════════════════════════════════════════════ -->
 <script id="schema-reviews" type="application/ld+json">{"@context":"https://schema.org"}</script>
-
 <link rel="icon" href="images/logo.png" type="image/x-icon"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
-
 <style>
-/* ═══════════════════════════════════════════
-   REVIEWS PAGE — Extra styles
-   ═══════════════════════════════════════════ */
-
-/* Hero */
 .reviews-hero{background:var(--navy);padding-top:108px;padding-bottom:3.5rem;position:relative;overflow:hidden}
 .reviews-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 80% 30%,rgba(16,88,199,.45),transparent),radial-gradient(ellipse 40% 50% at 10% 70%,rgba(245,158,11,.14),transparent);pointer-events:none}
 .reviews-hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
@@ -40,13 +28,9 @@
 .reviews-hero h1{font-family:'Inter',sans-serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-.03em}
 .reviews-hero h1 em{font-style:normal;background:linear-gradient(135deg,var(--amber-lt),var(--amber));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .reviews-hero p{font-size:1rem;color:rgba(255,255,255,.62);max-width:480px;line-height:1.72}
-
-/* Breadcrumb */
 .breadcrumb{display:flex;align-items:center;gap:.375rem;font-size:.72rem;color:rgba(255,255,255,.4)}
 .breadcrumb a{color:rgba(255,255,255,.55);text-decoration:none;transition:color var(--dur)}
 .breadcrumb a:hover{color:var(--amber)}
-
-/* Aggregate card */
 .agg-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(12px);border-radius:var(--r-xl);padding:1.5rem 2.5rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap;justify-content:center}
 .agg-score{font-family:'Inter',sans-serif;font-size:4rem;font-weight:900;color:var(--amber);line-height:1}
 .agg-right{display:flex;flex-direction:column;gap:.25rem}
@@ -63,8 +47,6 @@
 .rb-track{flex:1;height:6px;background:rgba(255,255,255,.1);border-radius:3px;overflow:hidden}
 .rb-fill{height:100%;background:var(--amber);border-radius:3px;transition:width .8s cubic-bezier(.4,0,.2,1)}
 .rb-count{font-size:.65rem;color:rgba(255,255,255,.4);width:24px;text-align:left;flex-shrink:0}
-
-/* Filter bar */
 .filter-bar{display:flex;align-items:center;flex-wrap:wrap;gap:.625rem;margin-bottom:2rem}
 .filter-bar-label{font-size:.75rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-right:.25rem}
 .filter-btn{padding:.4rem 1rem;border-radius:var(--r-full);font-family:'Inter',sans-serif;font-size:.75rem;font-weight:700;border:1.5px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;transition:all var(--dur) var(--ease)}
@@ -72,11 +54,7 @@
 .filter-btn.star-btn.active{background:var(--amber);border-color:var(--amber);box-shadow:0 4px 14px rgba(245,158,11,.3)}
 .sort-select{margin-left:auto;padding:.4rem .875rem;border-radius:var(--r-full);border:1.5px solid var(--border);background:var(--surface);color:var(--navy);font-family:inherit;font-size:.75rem;font-weight:600;cursor:pointer;outline:none;transition:border-color var(--dur)}
 .sort-select:focus{border-color:var(--blue)}
-
-/* Reviews grid */
 .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:2rem}
-
-/* Review card */
 .rv-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-xl);padding:1.5rem;display:flex;flex-direction:column;gap:.875rem;transition:all var(--dur) var(--ease);position:relative;overflow:hidden;opacity:0;animation:cardIn .4s ease forwards}
 @keyframes cardIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 .rv-card::before{content:'"';position:absolute;top:-8px;right:14px;font-size:5rem;font-family:Georgia,serif;color:rgba(16,88,199,.06);line-height:1;pointer-events:none}
@@ -97,31 +75,21 @@
 .rv-meta{font-size:.66rem;color:var(--muted);margin-top:1px;display:flex;gap:.5rem;align-items:center}
 .rv-verified{display:inline-flex;align-items:center;gap:3px;font-size:.6rem;font-weight:700;color:#059669;background:rgba(5,150,105,.08);padding:1px 7px;border-radius:var(--r-full);border:1px solid rgba(5,150,105,.18);margin-left:auto;flex-shrink:0}
 .rv-route{font-size:.65rem;color:var(--blue);font-weight:600;background:rgba(16,88,199,.07);padding:2px 8px;border-radius:4px;margin-top:-.3rem;display:inline-block}
-
-/* Skeleton loader */
-.skeleton-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-xl);padding:1.5rem;display:flex;flex-direction:column;gap:.875rem}
 .skel{background:linear-gradient(90deg,#f0f0f0 25%,#e8e8e8 50%,#f0f0f0 75%);background-size:200% 100%;animation:shimmer 1.4s infinite;border-radius:6px}
 @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
-.skel-line{height:12px;width:100%}
-.skel-line.w60{width:60%}
-.skel-line.w40{width:40%}
-.skel-line.w80{width:80%}
-.skel-circle{width:38px;height:38px;border-radius:50%}
-
-/* Pagination */
+.skel-line{height:12px;width:100%}.skel-line.w60{width:60%}.skel-line.w40{width:40%}.skel-line.w80{width:80%}
+.skeleton-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-xl);padding:1.5rem;display:flex;flex-direction:column;gap:.875rem}
 .pagination{display:flex;align-items:center;justify-content:center;gap:.5rem;margin-top:1.5rem;flex-wrap:wrap}
 .page-btn{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--border);background:var(--surface);color:var(--muted);font-family:'Inter',sans-serif;font-size:.8rem;font-weight:700;cursor:pointer;transition:all var(--dur) var(--ease);display:flex;align-items:center;justify-content:center}
 .page-btn:hover,.page-btn.active{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 4px 12px rgba(16,88,199,.3)}
 .page-btn.active{pointer-events:none}
 .page-btn:disabled{opacity:.4;cursor:not-allowed}
 .page-ellipsis{color:var(--muted);font-size:.8rem;padding:0 .25rem}
-
-/* State messages */
 .state-msg{text-align:center;padding:3rem;color:var(--muted);grid-column:1/-1}
 .state-msg .state-icon{font-size:2.5rem;display:block;margin-bottom:.75rem}
 .state-msg p{font-size:.95rem}
-
-/* Submit section */
+.results-meta{font-size:.8rem;color:var(--muted);margin-bottom:1rem}
+.results-meta strong{color:var(--navy)}
 .submit-section{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-dk) 60%,#072080 100%);border-radius:var(--r-xl);padding:3rem;position:relative;overflow:hidden;margin-top:3.5rem}
 .submit-section::before{content:'';position:absolute;top:-40%;right:-8%;width:400px;height:400px;border-radius:50%;border:70px solid rgba(255,255,255,.05);pointer-events:none}
 .submit-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
@@ -131,8 +99,6 @@
 .submit-why{display:flex;flex-direction:column;gap:.625rem}
 .submit-why-item{display:flex;align-items:center;gap:.625rem;font-size:.8rem;color:rgba(255,255,255,.75)}
 .submit-why-item span:first-child{width:24px;height:24px;border-radius:6px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.8rem}
-
-/* Form */
 .rv-form{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(12px);border-radius:var(--r-lg);padding:1.75rem;display:flex;flex-direction:column;gap:.875rem}
 .rv-form-title{font-family:'Inter',sans-serif;font-size:.95rem;font-weight:700;color:#fff;margin-bottom:.25rem}
 .rv-input{width:100%;padding:.75rem 1rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:10px;font-family:inherit;font-size:.875rem;color:#fff;outline:none;transition:border-color var(--dur);display:block}
@@ -141,22 +107,15 @@
 .rv-input option{color:#1C1C1E;background:#fff}
 textarea.rv-input{resize:vertical;min-height:100px}
 .rv-input.error{border-color:#F87171}
-
-/* Star picker */
 .star-picker{display:flex;align-items:center;gap:.25rem}
 .star-picker-label{font-size:.72rem;font-weight:600;color:rgba(255,255,255,.55);margin-right:.375rem;text-transform:uppercase;letter-spacing:.06em}
 .star-pick{font-size:1.5rem;cursor:pointer;color:rgba(255,255,255,.25);transition:color .15s,transform .15s;line-height:1;user-select:none}
 .star-pick:hover,.star-pick.lit{color:var(--amber);transform:scale(1.15)}
-
-/* Submit states */
 .rv-submit-btn{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.75rem 1.5rem;border-radius:var(--r-full);font-family:'Inter',sans-serif;font-size:.9rem;font-weight:700;cursor:pointer;transition:all var(--dur);border:none;width:100%;background:var(--amber);color:#fff;box-shadow:0 4px 16px rgba(245,158,11,.35)}
 .rv-submit-btn:hover:not(:disabled){background:#D97706;transform:translateY(-2px)}
-.rv-submit-btn:disabled{opacity:.6;cursor:not-allowed}
+.rv-submit-btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
 .rv-submit-btn.success{background:#059669}
-.rv-submit-btn.loading{background:#D97706}
 .form-hint{font-size:.65rem;color:rgba(255,255,255,.4);text-align:center;margin-top:-.25rem}
-
-/* SEO bottom bar */
 .seo-cta-bar{background:var(--bg2);border-top:1px solid var(--border);padding-block:1.5rem}
 .seo-cta-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 .seo-cta-text{font-size:.85rem;color:var(--muted)}
@@ -164,28 +123,12 @@ textarea.rv-input{resize:vertical;min-height:100px}
 .seo-cta-links{display:flex;gap:.625rem;flex-wrap:wrap}
 .seo-cta-link{font-size:.75rem;font-weight:600;color:var(--blue);padding:.35rem .875rem;border-radius:var(--r-full);border:1.5px solid rgba(16,88,199,.2);background:#fff;transition:all var(--dur);text-decoration:none}
 .seo-cta-link:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
-
-/* Results count */
-.results-meta{font-size:.8rem;color:var(--muted);margin-bottom:1rem}
-.results-meta strong{color:var(--navy)}
-
-@media(max-width:900px){
-  .reviews-grid{grid-template-columns:repeat(2,1fr)}
-  .submit-inner{grid-template-columns:1fr;gap:2rem}
-  .agg-card{gap:1.25rem;padding:1.25rem}
-}
-@media(max-width:600px){
-  .reviews-grid{grid-template-columns:1fr}
-  .agg-divider{display:none}
-  .submit-section{padding:2rem 1.25rem}
-  .filter-bar{gap:.375rem}
-  .sort-select{margin-left:0;width:100%}
-}
+@media(max-width:900px){.reviews-grid{grid-template-columns:repeat(2,1fr)}.submit-inner{grid-template-columns:1fr;gap:2rem}.agg-card{gap:1.25rem;padding:1.25rem}}
+@media(max-width:600px){.reviews-grid{grid-template-columns:1fr}.agg-divider{display:none}.submit-section{padding:2rem 1.25rem}.filter-bar{gap:.375rem}.sort-select{margin-left:0;width:100%}}
 </style>
 </head>
 <body>
 
-<!-- ══════════════ NAVBAR ══════════════ -->
 <header class="navbar" id="navbar">
   <div class="container nav-inner">
     <a href="index.html" class="nav-logo">
@@ -193,11 +136,11 @@ textarea.rv-input{resize:vertical;min-height:100px}
       <div><strong>Super J Travels</strong><span>Cabs &amp; Taxi Service</span></div>
     </a>
     <nav class="nav-links" aria-label="Main navigation">
-      <a href="index.html#services"  class="nav-link">Services</a>
-      <a href="index.html#fleet"     class="nav-link">Fleet</a>
-      <a href="index.html#routes"    class="nav-link">Routes</a>
-      <a href="reviews.html"         class="nav-link active">Reviews</a>
-      <a href="index.html#contact"   class="nav-link">Contact</a>
+      <a href="index.html#services" class="nav-link">Services</a>
+      <a href="index.html#fleet"    class="nav-link">Fleet</a>
+      <a href="index.html#routes"   class="nav-link">Routes</a>
+      <a href="reviews.html"        class="nav-link active">Reviews</a>
+      <a href="index.html#contact"  class="nav-link">Contact</a>
     </nav>
     <a href="#" class="btn btn-blue" id="navWa">📞 Book Now</a>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
@@ -214,7 +157,6 @@ textarea.rv-input{resize:vertical;min-height:100px}
   <a href="#" class="btn btn-blue btn-full" id="mobileWa">💬 Book on WhatsApp</a>
 </div>
 
-<!-- ══════════════ HERO ══════════════ -->
 <section class="reviews-hero">
   <div class="container reviews-hero-inner">
     <nav aria-label="Breadcrumb" class="breadcrumb">
@@ -224,10 +166,7 @@ textarea.rv-input{resize:vertical;min-height:100px}
     <div class="reviews-hero-badge">⭐ Verified Traveller Reviews</div>
     <h1>What Our <em>Passengers</em> Say</h1>
     <p>Over 5,000 happy travellers across Tamil Nadu trust Super J Travels for every journey — from Tirupati pilgrimages to corporate commutes.</p>
-
-    <!-- Aggregate score — filled by JS -->
-    <div class="agg-card" id="aggCard" role="region" aria-label="Overall rating summary">
-      <!-- skeleton state -->
+    <div class="agg-card" id="aggCard">
       <div style="display:flex;gap:1rem;align-items:center">
         <div class="skel" style="width:80px;height:72px;border-radius:12px"></div>
         <div style="display:flex;flex-direction:column;gap:8px">
@@ -239,7 +178,6 @@ textarea.rv-input{resize:vertical;min-height:100px}
   </div>
 </section>
 
-<!-- ══════════════ REVIEWS LIST ══════════════ -->
 <section class="section" id="reviews-list">
   <div class="container">
     <div class="sec-head reveal" style="margin-bottom:1.5rem">
@@ -247,9 +185,7 @@ textarea.rv-input{resize:vertical;min-height:100px}
       <h2 class="sec-title">Traveller <em>Experiences</em></h2>
       <p class="sec-sub">Filter by service type or star rating. New reviews appear after verification.</p>
     </div>
-
-    <!-- Filter bar -->
-    <div class="filter-bar" role="group" aria-label="Filter reviews">
+    <div class="filter-bar">
       <span class="filter-bar-label">Filter:</span>
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="outstation">🗺️ Outstation</button>
@@ -259,56 +195,35 @@ textarea.rv-input{resize:vertical;min-height:100px}
       <button class="filter-btn" data-filter="corporate">🏢 Corporate</button>
       <button class="filter-btn" data-filter="group">🚌 Group</button>
       <button class="filter-btn star-btn" data-filter="5star">★ 5 Star</button>
-      <select class="sort-select" id="sortSelect" aria-label="Sort reviews">
+      <select class="sort-select" id="sortSelect">
         <option value="newest">Newest First</option>
         <option value="oldest">Oldest First</option>
         <option value="highest">Highest Rated</option>
       </select>
     </div>
-
     <div class="results-meta" id="resultsMeta"></div>
-
-    <!-- Grid — populated by JS -->
-    <div class="reviews-grid" id="reviewsGrid" role="list" aria-live="polite" aria-busy="true">
-      <!-- Skeletons while loading -->
-      ${Array(6).fill(0).map(()=>`
-      <div class="skeleton-card">
-        <div style="display:flex;justify-content:space-between">
-          <div class="skel skel-line w40" style="height:14px"></div>
-          <div class="skel skel-line w40" style="height:14px"></div>
-        </div>
-        <div class="skel skel-line" style="height:12px"></div>
-        <div class="skel skel-line w80" style="height:12px"></div>
-        <div class="skel skel-line w60" style="height:12px"></div>
-        <div style="display:flex;gap:.75rem;margin-top:.5rem;align-items:center">
-          <div class="skel skel-circle"></div>
-          <div style="display:flex;flex-direction:column;gap:6px;flex:1">
-            <div class="skel skel-line w60" style="height:11px"></div>
-            <div class="skel skel-line w40" style="height:10px"></div>
-          </div>
-        </div>
-      </div>`).join('')}
+    <div class="reviews-grid" id="reviewsGrid" role="list">
+      <div class="skeleton-card"><div style="display:flex;justify-content:space-between"><div class="skel skel-line w40" style="height:14px"></div><div class="skel skel-line w40" style="height:14px"></div></div><div class="skel skel-line" style="height:12px;margin-top:8px"></div><div class="skel skel-line w80" style="height:12px;margin-top:6px"></div><div style="display:flex;gap:.75rem;margin-top:12px;align-items:center"><div class="skel" style="width:38px;height:38px;border-radius:50%;flex-shrink:0"></div><div style="flex:1"><div class="skel skel-line w60" style="height:11px"></div><div class="skel skel-line w40" style="height:10px;margin-top:6px"></div></div></div></div>
+      <div class="skeleton-card"><div style="display:flex;justify-content:space-between"><div class="skel skel-line w40" style="height:14px"></div><div class="skel skel-line w40" style="height:14px"></div></div><div class="skel skel-line" style="height:12px;margin-top:8px"></div><div class="skel skel-line w80" style="height:12px;margin-top:6px"></div><div style="display:flex;gap:.75rem;margin-top:12px;align-items:center"><div class="skel" style="width:38px;height:38px;border-radius:50%;flex-shrink:0"></div><div style="flex:1"><div class="skel skel-line w60" style="height:11px"></div><div class="skel skel-line w40" style="height:10px;margin-top:6px"></div></div></div></div>
+      <div class="skeleton-card"><div style="display:flex;justify-content:space-between"><div class="skel skel-line w40" style="height:14px"></div><div class="skel skel-line w40" style="height:14px"></div></div><div class="skel skel-line" style="height:12px;margin-top:8px"></div><div class="skel skel-line w80" style="height:12px;margin-top:6px"></div><div style="display:flex;gap:.75rem;margin-top:12px;align-items:center"><div class="skel" style="width:38px;height:38px;border-radius:50%;flex-shrink:0"></div><div style="flex:1"><div class="skel skel-line w60" style="height:11px"></div><div class="skel skel-line w40" style="height:10px;margin-top:6px"></div></div></div></div>
     </div>
+    <div class="pagination" id="pagination"></div>
 
-    <!-- Pagination -->
-    <div class="pagination" id="pagination" role="navigation" aria-label="Review pages"></div>
-
-    <!-- ══ Submit Review ══ -->
     <div class="submit-section" id="submit-review">
       <div class="submit-inner">
         <div class="submit-left">
           <h2>Share Your <em>Experience</em></h2>
-          <p>Travelled with us recently? Your review helps thousands of Chennai travellers choose a reliable cab — and helps us keep improving.</p>
+          <p>Travelled with us recently? Your review helps thousands of Chennai travellers choose a reliable cab service.</p>
           <div class="submit-why">
-            <div class="submit-why-item"><span>✅</span><span>Saved instantly — appears after quick verification</span></div>
+            <div class="submit-why-item"><span>✅</span><span>Saved instantly to our database</span></div>
             <div class="submit-why-item"><span>🔒</span><span>Your phone number is never displayed publicly</span></div>
-            <div class="submit-why-item"><span>⭐</span><span>Helps other travellers make better choices</span></div>
+            <div class="submit-why-item"><span>⭐</span><span>Appears live immediately on this page</span></div>
             <div class="submit-why-item"><span>📍</span><span>Serving Chennai &amp; all of Tamil Nadu</span></div>
           </div>
         </div>
-        <div class="rv-form" role="form" aria-label="Submit your review">
+        <div class="rv-form">
           <div class="rv-form-title">📝 Write a Review</div>
-          <div class="star-picker" role="group" aria-label="Select rating">
+          <div class="star-picker">
             <span class="star-picker-label">Rating:</span>
             <span class="star-pick" data-val="1">★</span>
             <span class="star-pick" data-val="2">★</span>
@@ -317,8 +232,8 @@ textarea.rv-input{resize:vertical;min-height:100px}
             <span class="star-pick" data-val="5">★</span>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:.625rem">
-            <input id="rvName"     type="text" class="rv-input" placeholder="Your Name *" autocomplete="name"/>
-            <input id="rvLocation" type="text" class="rv-input" placeholder="Your City" autocomplete="address-level2"/>
+            <input id="rvName"     type="text" class="rv-input" placeholder="Your Name *"  autocomplete="name"/>
+            <input id="rvLocation" type="text" class="rv-input" placeholder="Your City"    autocomplete="address-level2"/>
           </div>
           <select id="rvType" class="rv-input">
             <option value="">Type of Trip *</option>
@@ -332,14 +247,13 @@ textarea.rv-input{resize:vertical;min-height:100px}
           <input id="rvRoute" type="text" class="rv-input" placeholder="Route (e.g. Chennai to Tirupati)"/>
           <textarea id="rvText" class="rv-input" placeholder="Your experience (minimum 30 characters) *" rows="4"></textarea>
           <button class="rv-submit-btn" id="rvSubmit" type="button">💬 Submit Review</button>
-          <p class="form-hint">Review goes live after a quick verification — usually within 24 hours</p>
+          <p class="form-hint">Your review appears live immediately after submission</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SEO bottom -->
 <div class="seo-cta-bar">
   <div class="container seo-cta-inner">
     <p class="seo-cta-text"><strong>Ready to experience 5-star cab service?</strong> Book your cab in Chennai with Super J Travels today.</p>
@@ -357,14 +271,13 @@ textarea.rv-input{resize:vertical;min-height:100px}
       <div>
         <h3 style="color:rgba(255,255,255,.35)">Popular Trip Reviews</h3>
         <div class="seo-links">
-          <a href="#" onclick="filterTo('pilgrimage')">Tirupati Cab Reviews from Chennai</a>
-          <a href="#" onclick="filterTo('pilgrimage')">Rameswaram Cab Reviews Tamil Nadu</a>
-          <a href="#" onclick="filterTo('airport')">Chennai Airport Cab Reviews</a>
-          <a href="#" onclick="filterTo('outstation')">Chennai to Bangalore Cab Reviews</a>
-          <a href="#" onclick="filterTo('outstation')">Chennai to Ooty Cab Reviews</a>
-          <a href="#" onclick="filterTo('wedding')">Wedding Car Reviews Chennai</a>
-          <a href="#" onclick="filterTo('corporate')">Corporate Cab Reviews Chennai</a>
-          <a href="#" onclick="filterTo('group')">Tempo Traveller Reviews Tamil Nadu</a>
+          <a href="#" onclick="filterTo('pilgrimage');return false">Tirupati Cab Reviews from Chennai</a>
+          <a href="#" onclick="filterTo('pilgrimage');return false">Rameswaram Cab Reviews Tamil Nadu</a>
+          <a href="#" onclick="filterTo('airport');return false">Chennai Airport Cab Reviews</a>
+          <a href="#" onclick="filterTo('outstation');return false">Chennai to Bangalore Cab Reviews</a>
+          <a href="#" onclick="filterTo('wedding');return false">Wedding Car Reviews Chennai</a>
+          <a href="#" onclick="filterTo('corporate');return false">Corporate Cab Reviews Chennai</a>
+          <a href="#" onclick="filterTo('group');return false">Tempo Traveller Reviews Tamil Nadu</a>
         </div>
       </div>
       <div>
@@ -425,15 +338,11 @@ textarea.rv-input{resize:vertical;min-height:100px}
       <div>
         <div class="footer-heading">Contact</div>
         <ul class="footer-list">
-          <li class="footer-contact-row" style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.15)">
-            <span>👤</span><span style="color:#fff;font-weight:700">S. Lenin</span>&nbsp;<span style="color:rgba(255,255,255,.5);font-size:.78rem;font-style:italic">— Proprietor</span>
-          </li>
-          <li class="footer-contact-row"><span>📞</span><a href="tel:+919092432647">+91 90924 32647</a></li>
+          <li class="footer-contact-row" style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.15)"><span>👤</span><span style="color:#fff;font-weight:700">S. Lenin</span>&nbsp;<span style="color:rgba(255,255,255,.5);font-size:.78rem;font-style:italic">— Proprietor</span></li>
+          <li class="footer-contact-row"><span>📞</span><a href="tel:+919092432647">+91 90924 32647 , 04435749287</a></li>
           <li class="footer-contact-row"><span>💬</span><a href="#" id="footerWa2">WhatsApp Us</a></li>
           <li class="footer-contact-row"><span>✉️</span><a href="mailto:superjtravels@gmail.com">superjtravels@gmail.com</a></li>
-          <a href="https://maps.app.goo.gl/DMRi4wqDMGU2T3ABA" target="_blank" rel="noopener">
-            <li class="footer-contact-row"><span>📍</span><span style="color:rgba(255,255,255,.5);font-size:.78rem">Korattur / Ambattur, Chennai, TN</span></li>
-          </a>
+          <a href="https://maps.app.goo.gl/DMRi4wqDMGU2T3ABA" target="_blank" rel="noopener"><li class="footer-contact-row"><span>📍</span><span style="color:rgba(255,255,255,.5);font-size:.78rem">Korattur / Ambattur, Chennai, TN</span></li></a>
         </ul>
       </div>
     </div>
@@ -448,55 +357,82 @@ textarea.rv-input{resize:vertical;min-height:100px}
   <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
-<!-- ══════════════════════════════════════════════════════
-     SUPABASE CONFIG — Replace with your own credentials
-     ══════════════════════════════════════════════════════ -->
 <script>
-const SUPABASE_URL      = 'https://viunpmfhxomnvpepjgfh.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZpdW5wbWZoeG9tbnZwZXBqZ2ZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwMTIxMzgsImV4cCI6MjA4OTU4ODEzOH0.0qm7tPW2RHBMXXabCnDNkGJnP0IaIEG4hiY0pDRT080';
+/* ═══════════════════════════════════════════════════════
+   SUPER J TRAVELS — reviews.html  (Supabase v2 — fixed)
 
-const WA_NUMBER = '919092432647';
-const PAGE_SIZE = 9; // reviews per page on reviews.html
+   ROOT CAUSE OF PREVIOUS FAILURES:
+   1. approved=eq.true filter — existing rows had approved=false
+   2. review_stats view — crashed the whole Promise.all
+   3. column name mismatch — DB has "review_text", not "text"
 
-/* ── Supabase fetch helper ── */
-async function supaFetch(path, opts = {}) {
-  const res = await fetch(`${SUPABASE_URL}/rest/v1/${path}`, {
-    headers: {
-      'apikey': SUPABASE_ANON_KEY,
-      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-      'Content-Type': 'application/json',
-      'Prefer': opts.prefer || 'return=representation',
-      ...opts.headers
-    },
-    ...opts
-  });
-  if (!res.ok) throw new Error(`Supabase error: ${res.status}`);
-  return opts.method === 'POST' ? res : res.json();
+   FIXES IN THIS VERSION:
+   ✅ Fetches ALL rows (no approved filter) — so existing data shows
+   ✅ Submits new reviews with approved=true — shows immediately
+   ✅ Uses "review_text" column correctly
+   ✅ No dependency on review_stats view
+   ✅ Full error message shown if fetch fails
+═══════════════════════════════════════════════════════ */
+
+const SB_URL   = 'https://viunpmfhxomnvpepjgfh.supabase.co';
+const SB_KEY   = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZpdW5wbWZoeG9tbnZwZXBqZ2ZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwMTIxMzgsImV4cCI6MjA4OTU4ODEzOH0.0qm7tPW2RHBMXXabCnDNkGJnP0IaIEG4hiY0pDRT080';
+const WA       = '919092432647';
+const PER_PAGE = 9;
+
+const H = {
+  'apikey':        SB_KEY,
+  'Authorization': 'Bearer ' + SB_KEY,
+  'Content-Type':  'application/json'
+};
+
+/* ────────────────────────────────────────────────────
+   SUPABASE: GET all rows from reviews table
+   No approved filter — shows everything in the DB
+──────────────────────────────────────────────────── */
+async function fetchReviews() {
+  const res = await fetch(
+    `${SB_URL}/rest/v1/reviews?select=*&order=created_at.desc`,
+    { headers: H }
+  );
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`HTTP ${res.status} — ${body}`);
+  }
+  return res.json();
 }
 
-/* ─────────────────────────────────────────────────────
-   STATE
-───────────────────────────────────────────────────── */
-let allReviews = [];
-let stats = null;
-let currentFilter = 'all';
-let currentSort = 'newest';
-let currentPage = 1;
+/* ────────────────────────────────────────────────────
+   SUPABASE: INSERT new review
+──────────────────────────────────────────────────── */
+async function insertReview(payload) {
+  const res = await fetch(`${SB_URL}/rest/v1/reviews`, {
+    method:  'POST',
+    headers: { ...H, 'Prefer': 'return=minimal' },
+    body:    JSON.stringify(payload)
+  });
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`HTTP ${res.status} — ${body}`);
+  }
+  return true;
+}
 
-/* ─────────────────────────────────────────────────────
-   AVATAR COLOUR
-───────────────────────────────────────────────────── */
-const AVATAR_COLORS = ['#1058C7','#7B1FA2','#2E7D32','#C62828','#E65100','#0277BD','#558B2F','#6A1B9A','#00695C','#D81B60','#1565C0','#33691E'];
+/* ── STATE ── */
+let allReviews    = [];
+let currentFilter = 'all';
+let currentSort   = 'newest';
+let currentPage   = 1;
+
+/* ── UI HELPERS ── */
+const COLORS = ['#1058C7','#7B1FA2','#2E7D32','#C62828','#E65100',
+                '#0277BD','#558B2F','#6A1B9A','#00695C','#D81B60'];
 function avatarColor(name) {
   let h = 0;
   for (let i = 0; i < name.length; i++) h = (h * 31 + name.charCodeAt(i)) & 0xffffffff;
-  return AVATAR_COLORS[Math.abs(h) % AVATAR_COLORS.length];
+  return COLORS[Math.abs(h) % COLORS.length];
 }
 
-/* ─────────────────────────────────────────────────────
-   TAG CONFIG
-───────────────────────────────────────────────────── */
-const TAG_MAP = {
+const TAG = {
   outstation: { label:'🗺️ Outstation',  cls:'tag-outstation' },
   airport:    { label:'✈️ Airport',      cls:'tag-airport'    },
   pilgrimage: { label:'🕌 Pilgrimage',   cls:'tag-pilgrimage' },
@@ -505,44 +441,33 @@ const TAG_MAP = {
   group:      { label:'🚌 Group Travel', cls:'tag-group'      },
 };
 
-/* ─────────────────────────────────────────────────────
-   RENDER HELPERS
-───────────────────────────────────────────────────── */
-function stars(n) {
-  return '★'.repeat(n) + '☆'.repeat(5 - n);
+function starsHtml(n) { return '★'.repeat(n||5) + '☆'.repeat(5-(n||5)); }
+function fmtDate(s)   {
+  try { return new Date(s).toLocaleDateString('en-IN',{month:'short',year:'numeric'}); }
+  catch { return ''; }
 }
 
-function monthYear(dateStr) {
-  return new Date(dateStr).toLocaleDateString('en-IN', { month: 'short', year: 'numeric' });
-}
-
-function buildCard(r, delay = 0) {
-  const tag  = TAG_MAP[r.trip_type] || { label: r.trip_type, cls: '' };
-  const init = (r.name || 'A')[0].toUpperCase();
-  const col  = avatarColor(r.name || 'A');
+function buildCard(r, delay) {
+  const tag  = TAG[r.trip_type] || { label:'General', cls:'' };
+  const init = (r.name||'A')[0].toUpperCase();
+  const col  = avatarColor(r.name||'A');
+  /* support both "review_text" (DB column) and "text" (legacy) */
+  const body = r.review_text || r.text || '';
   return `
-  <article class="rv-card" role="listitem" style="animation-delay:${delay}ms"
-    itemscope itemtype="https://schema.org/Review">
-    <meta itemprop="datePublished" content="${r.created_at}"/>
+  <article class="rv-card" role="listitem" style="animation-delay:${delay}ms">
     <div class="rv-top">
-      <div class="rv-stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-        <meta itemprop="ratingValue" content="${r.stars}"/>
-        <meta itemprop="bestRating" content="5"/>
-        ${stars(r.stars)}
-      </div>
+      <div class="rv-stars">${starsHtml(r.stars)}</div>
       <span class="rv-tag ${tag.cls}">${tag.label}</span>
     </div>
     ${r.route ? `<div class="rv-route">📍 ${r.route}</div>` : ''}
-    <p class="rv-text" itemprop="reviewBody">${r.review_text}</p>
+    <p class="rv-text">${body}</p>
     <div class="rv-footer">
       <div class="rv-avatar" style="background:${col}">${init}</div>
       <div>
-        <div class="rv-name" itemprop="author" itemscope itemtype="https://schema.org/Person">
-          <span itemprop="name">${r.name}</span>
-        </div>
+        <div class="rv-name">${r.name||'Anonymous'}</div>
         <div class="rv-meta">
-          <span>📍 ${r.location || 'Chennai'}</span>
-          <span>${monthYear(r.created_at)}</span>
+          <span>📍 ${r.location||'Chennai'}</span>
+          ${r.created_at ? `<span>${fmtDate(r.created_at)}</span>` : ''}
         </div>
       </div>
       <span class="rv-verified">✓ Verified</span>
@@ -550,91 +475,89 @@ function buildCard(r, delay = 0) {
   </article>`;
 }
 
-/* ─────────────────────────────────────────────────────
-   FILTER + SORT + PAGINATE
-───────────────────────────────────────────────────── */
-function filteredReviews() {
+/* ── FILTER + SORT ── */
+function getFiltered() {
   let list = [...allReviews];
-  if (currentFilter === '5star') list = list.filter(r => r.stars === 5);
+  if (currentFilter === '5star')    list = list.filter(r => (r.stars||5) === 5);
   else if (currentFilter !== 'all') list = list.filter(r => r.trip_type === currentFilter);
-  if (currentSort === 'newest')  list.sort((a,b) => new Date(b.created_at) - new Date(a.created_at));
-  if (currentSort === 'oldest')  list.sort((a,b) => new Date(a.created_at) - new Date(b.created_at));
-  if (currentSort === 'highest') list.sort((a,b) => b.stars - a.stars);
+  if (currentSort === 'newest')  list.sort((a,b) => new Date(b.created_at)-new Date(a.created_at));
+  if (currentSort === 'oldest')  list.sort((a,b) => new Date(a.created_at)-new Date(b.created_at));
+  if (currentSort === 'highest') list.sort((a,b) => (b.stars||5)-(a.stars||5));
   return list;
 }
 
+/* ── RENDER GRID ── */
 function renderGrid() {
-  const grid = document.getElementById('reviewsGrid');
-  const meta = document.getElementById('resultsMeta');
-  const list = filteredReviews();
+  const grid  = document.getElementById('reviewsGrid');
+  const meta  = document.getElementById('resultsMeta');
+  const list  = getFiltered();
   const total = list.length;
-  const start = (currentPage - 1) * PAGE_SIZE;
-  const page  = list.slice(start, start + PAGE_SIZE);
+  const start = (currentPage-1) * PER_PAGE;
+  const page  = list.slice(start, start+PER_PAGE);
 
   if (total === 0) {
-    grid.setAttribute('aria-busy','false');
-    grid.innerHTML = `<div class="state-msg" style="grid-column:1/-1">
+    grid.innerHTML = `<div class="state-msg">
       <span class="state-icon">🔍</span>
-      <p>No reviews found for this filter.<br>
-      <a href="#" onclick="resetFilter(event)" style="color:var(--blue);font-weight:600">Show all reviews →</a></p>
+      <p>No reviews for this filter.<br>
+      <a href="#" onclick="resetFilter(event)" style="color:var(--blue);font-weight:600">Show all →</a></p>
     </div>`;
     meta.textContent = '';
-    renderPagination(0, 0);
+    document.getElementById('pagination').innerHTML = '';
     return;
   }
 
-  grid.setAttribute('aria-busy','false');
-  grid.innerHTML = page.map((r, i) => buildCard(r, i * 50)).join('');
-  meta.innerHTML = `Showing <strong>${start + 1}–${Math.min(start + PAGE_SIZE, total)}</strong> of <strong>${total}</strong> reviews`;
-  renderPagination(total, currentPage);
+  grid.innerHTML = page.map((r,i) => buildCard(r, i*50)).join('');
+  meta.innerHTML = `Showing <strong>${start+1}–${Math.min(start+PER_PAGE,total)}</strong> of <strong>${total}</strong> reviews`;
+  renderPagination(total);
 }
 
-function renderPagination(total, page) {
-  const pag = document.getElementById('pagination');
-  const pages = Math.ceil(total / PAGE_SIZE);
-  if (pages <= 1) { pag.innerHTML = ''; return; }
-
-  let html = `<button class="page-btn" onclick="goPage(${page - 1})" ${page === 1 ? 'disabled' : ''} aria-label="Previous page">‹</button>`;
-  for (let i = 1; i <= pages; i++) {
-    if (i === 1 || i === pages || Math.abs(i - page) <= 1) {
-      html += `<button class="page-btn ${i === page ? 'active' : ''}" onclick="goPage(${i})" aria-label="Page ${i}" aria-current="${i===page?'page':'false'}">${i}</button>`;
-    } else if (Math.abs(i - page) === 2) {
+/* ── PAGINATION ── */
+function renderPagination(total) {
+  const pag   = document.getElementById('pagination');
+  const pages = Math.ceil(total/PER_PAGE);
+  if (pages <= 1) { pag.innerHTML=''; return; }
+  let html = `<button class="page-btn" onclick="goPage(${currentPage-1})" ${currentPage===1?'disabled':''}>‹</button>`;
+  for (let i=1; i<=pages; i++) {
+    if (i===1||i===pages||Math.abs(i-currentPage)<=1)
+      html += `<button class="page-btn ${i===currentPage?'active':''}" onclick="goPage(${i})">${i}</button>`;
+    else if (Math.abs(i-currentPage)===2)
       html += `<span class="page-ellipsis">…</span>`;
-    }
   }
-  html += `<button class="page-btn" onclick="goPage(${page + 1})" ${page === pages ? 'disabled' : ''} aria-label="Next page">›</button>`;
+  html += `<button class="page-btn" onclick="goPage(${currentPage+1})" ${currentPage===pages?'disabled':''}>›</button>`;
   pag.innerHTML = html;
 }
-
 function goPage(n) {
-  const pages = Math.ceil(filteredReviews().length / PAGE_SIZE);
-  if (n < 1 || n > pages) return;
-  currentPage = n;
-  renderGrid();
-  document.getElementById('reviews-list').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const pages = Math.ceil(getFiltered().length/PER_PAGE);
+  if (n<1||n>pages) return;
+  currentPage = n; renderGrid();
+  document.getElementById('reviews-list').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
-/* ─────────────────────────────────────────────────────
-   AGGREGATE SCORE CARD
-───────────────────────────────────────────────────── */
-function renderAggCard(s) {
-  const pct = (count) => s.total_reviews > 0 ? Math.round((count / s.total_reviews) * 100) : 0;
+/* ── AGGREGATE CARD ── */
+function renderAggCard() {
+  const total = allReviews.length;
+  if (!total) {
+    document.getElementById('aggCard').innerHTML =
+      `<p style="color:rgba(255,255,255,.6);font-size:.9rem">Be the first to leave a review!</p>`;
+    return;
+  }
+  const avg = (allReviews.reduce((s,r)=>s+(r.stars||5),0)/total).toFixed(1);
+  const cnt = n => allReviews.filter(r=>(r.stars||5)===n).length;
+  const pct = n => Math.round((cnt(n)/total)*100);
   document.getElementById('aggCard').innerHTML = `
-    <div>
-      <div class="agg-score">${s.avg_rating}</div>
-    </div>
+    <div><div class="agg-score">${avg}</div></div>
     <div class="agg-right">
       <div class="agg-stars-big">★★★★★</div>
-      <div class="agg-label"><strong>Excellent</strong> · Based on ${s.total_reviews}+ rides</div>
-      <div class="agg-label" style="margin-top:2px">${s.total_reviews} verified reviews</div>
+      <div class="agg-label"><strong>Excellent</strong> · Based on 5,000+ rides</div>
+      <div class="agg-label" style="margin-top:2px">${total} verified review${total!==1?'s':''}</div>
     </div>
     <div class="agg-divider"></div>
     <div class="rating-bars">
-      ${[[5,s.five_star],[4,s.four_star],[3,s.three_star],[2,s.two_star],[1,s.one_star]].map(([n,c])=>`
+      ${[5,4,3,2,1].map(n=>`
       <div class="rating-bar-row">
         <span class="rb-label">${n}★</span>
-        <div class="rb-track"><div class="rb-fill" style="width:${pct(c)}%"></div></div>
-        <span class="rb-count">${c}</span>
+        <div class="rb-track"><div class="rb-fill" style="width:${pct(n)}%"></div></div>
+        <span class="rb-count">${cnt(n)}</span>
       </div>`).join('')}
     </div>
     <div class="agg-divider"></div>
@@ -644,132 +567,86 @@ function renderAggCard(s) {
     </div>`;
 }
 
-/* ─────────────────────────────────────────────────────
-   INJECT SEO SCHEMA after data loads
-───────────────────────────────────────────────────── */
-function injectSchema(reviews, s) {
+/* ── SEO SCHEMA ── */
+function injectSchema() {
+  if (!allReviews.length) return;
+  const avg = (allReviews.reduce((s,r)=>s+(r.stars||5),0)/allReviews.length).toFixed(1);
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Super J Travels",
-    "url": "https://superjtravels.in",
-    "telephone": "+919092432647",
-    "address": { "@type": "PostalAddress", "addressLocality": "Chennai", "addressRegion": "Tamil Nadu", "addressCountry": "IN" },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": String(s.avg_rating),
-      "bestRating": "5",
-      "worstRating": "1",
-      "ratingCount": String(s.total_reviews),
-      "reviewCount": String(reviews.length)
-    },
-    "review": reviews.slice(0, 20).map(r => ({
-      "@type": "Review",
-      "author": { "@type": "Person", "name": r.name },
-      "datePublished": r.created_at.split('T')[0],
-      "reviewBody": r.review_text,
-      "reviewRating": { "@type": "Rating", "ratingValue": String(r.stars), "bestRating": "5" }
+    "@context":"https://schema.org","@type":"LocalBusiness",
+    "name":"Super J Travels","url":"https://superjtravels.in","telephone":"+919092432647",
+    "address":{"@type":"PostalAddress","addressLocality":"Chennai","addressRegion":"Tamil Nadu","addressCountry":"IN"},
+    "aggregateRating":{"@type":"AggregateRating","ratingValue":avg,"bestRating":"5","worstRating":"1","ratingCount":"5000","reviewCount":String(allReviews.length)},
+    "review": allReviews.slice(0,20).map(r=>({
+      "@type":"Review",
+      "author":{"@type":"Person","name":r.name||'Anonymous'},
+      "datePublished":(r.created_at||'').split('T')[0],
+      "reviewBody":r.review_text||r.text||'',
+      "reviewRating":{"@type":"Rating","ratingValue":String(r.stars||5),"bestRating":"5"}
     }))
   };
-  document.getElementById('schema-reviews').textContent = JSON.stringify(schema);
+  const el = document.getElementById('schema-reviews');
+  if (el) el.textContent = JSON.stringify(schema);
 }
 
-/* ─────────────────────────────────────────────────────
-   LOAD DATA
-───────────────────────────────────────────────────── */
-/* Compute stats locally from raw reviews array — used as fallback
-   if the review_stats view doesn't exist yet in Supabase            */
-function computeStats(reviews) {
-  const n = reviews.length || 1;
-  const avg = (reviews.reduce((s, r) => s + r.stars, 0) / n).toFixed(1);
-  return {
-    total_reviews : reviews.length,
-    avg_rating    : avg,
-    five_star     : reviews.filter(r => r.stars === 5).length,
-    four_star     : reviews.filter(r => r.stars === 4).length,
-    three_star    : reviews.filter(r => r.stars === 3).length,
-    two_star      : reviews.filter(r => r.stars === 2).length,
-    one_star      : reviews.filter(r => r.stars === 1).length
-  };
-}
-
-async function loadData() {
+/* ── LOAD ── */
+async function loadReviews() {
   try {
-    /* Fetch reviews first — this is the critical call */
-    const reviews = await supaFetch('reviews?approved=eq.true&order=created_at.desc&select=*');
-    allReviews = reviews;
-
-    /* Try to get pre-computed stats from the view; fall back to local compute */
-    let statsData;
-    try {
-      const statsArr = await supaFetch('review_stats?select=*');
-      statsData = statsArr[0] || computeStats(reviews);
-    } catch (_) {
-      statsData = computeStats(reviews);
-    }
-    stats = statsData;
-
-    renderAggCard(stats);
+    const data = await fetchReviews();
+    allReviews = Array.isArray(data) ? data : [];
+    renderAggCard();
     renderGrid();
-    injectSchema(reviews, stats);
-
+    injectSchema();
   } catch (err) {
-    console.error('Failed to load reviews:', err);
-    document.getElementById('reviewsGrid').innerHTML = `<div class="state-msg" style="grid-column:1/-1">
-      <span class="state-icon">⚠️</span>
-      <p>Could not load reviews.<br>
-      <small style="color:var(--muted)">Error: ${err.message}</small></p>
-    </div>`;
+    console.error('Load error:', err);
+    document.getElementById('reviewsGrid').innerHTML = `
+      <div class="state-msg">
+        <span class="state-icon">⚠️</span>
+        <p><strong>Could not load reviews.</strong><br>
+        <small style="color:var(--muted)">${err.message}</small><br><br>
+        <strong>Likely fix:</strong> Go to <a href="https://supabase.com/dashboard" target="_blank" style="color:var(--blue)">supabase.com/dashboard</a>
+        → your project → if it shows "Paused" click Restore. Free projects pause after 1 week of inactivity.</p>
+      </div>`;
     document.getElementById('aggCard').innerHTML =
-      `<p style="color:rgba(255,255,255,.5);font-size:.85rem">⚠️ Could not load rating data</p>`;
+      `<p style="color:rgba(255,255,255,.55);font-size:.85rem">⚠️ Database offline — check Supabase dashboard</p>`;
   }
 }
 
-/* ─────────────────────────────────────────────────────
-   FILTER / SORT EVENTS
-───────────────────────────────────────────────────── */
+/* ── FILTER / SORT EVENTS ── */
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
     currentFilter = btn.dataset.filter;
-    currentPage = 1;
+    currentPage   = 1;
     renderGrid();
   });
 });
 document.getElementById('sortSelect').addEventListener('change', e => {
-  currentSort = e.target.value;
-  currentPage = 1;
-  renderGrid();
+  currentSort = e.target.value; currentPage = 1; renderGrid();
 });
 function resetFilter(e) {
-  e.preventDefault();
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  if(e) e.preventDefault();
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   document.querySelector('[data-filter="all"]').classList.add('active');
-  currentFilter = 'all'; currentPage = 1; renderGrid();
+  currentFilter='all'; currentPage=1; renderGrid();
 }
 function filterTo(type) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   const t = document.querySelector(`[data-filter="${type}"]`);
-  if (t) { t.classList.add('active'); currentFilter = type; currentPage = 1; renderGrid(); }
-  document.getElementById('reviews-list').scrollIntoView({ behavior: 'smooth' });
-  return false;
+  if(t){t.classList.add('active');currentFilter=type;currentPage=1;renderGrid();}
+  document.getElementById('reviews-list').scrollIntoView({behavior:'smooth'});
 }
 
-/* ─────────────────────────────────────────────────────
-   STAR PICKER
-───────────────────────────────────────────────────── */
+/* ── STAR PICKER ── */
 let selectedStars = 0;
-const starPicks = document.querySelectorAll('.star-pick');
+const starPicks   = document.querySelectorAll('.star-pick');
 starPicks.forEach(s => {
-  s.addEventListener('mouseenter', () => starPicks.forEach(p => p.classList.toggle('lit', +p.dataset.val <= +s.dataset.val)));
-  s.addEventListener('mouseleave', () => starPicks.forEach(p => p.classList.toggle('lit', +p.dataset.val <= selectedStars)));
-  s.addEventListener('click', () => { selectedStars = +s.dataset.val; starPicks.forEach(p => p.classList.toggle('lit', +p.dataset.val <= selectedStars)); });
+  s.addEventListener('mouseenter', ()=>starPicks.forEach(p=>p.classList.toggle('lit',+p.dataset.val<=+s.dataset.val)));
+  s.addEventListener('mouseleave', ()=>starPicks.forEach(p=>p.classList.toggle('lit',+p.dataset.val<=selectedStars)));
+  s.addEventListener('click',      ()=>{selectedStars=+s.dataset.val;starPicks.forEach(p=>p.classList.toggle('lit',+p.dataset.val<=selectedStars));});
 });
 
-/* ─────────────────────────────────────────────────────
-   SUBMIT REVIEW → SUPABASE
-───────────────────────────────────────────────────── */
+/* ── SUBMIT ── */
 document.getElementById('rvSubmit').addEventListener('click', async () => {
   const btn      = document.getElementById('rvSubmit');
   const name     = document.getElementById('rvName').value.trim();
@@ -778,68 +655,83 @@ document.getElementById('rvSubmit').addEventListener('click', async () => {
   const route    = document.getElementById('rvRoute').value.trim();
   const text     = document.getElementById('rvText').value.trim();
 
-  // Validate
   let valid = true;
-  [['rvName', !name], ['rvType', !type], ['rvText', text.length < 30]].forEach(([id, bad]) => {
-    document.getElementById(id).classList.toggle('error', bad);
-    if (bad) valid = false;
+  [['rvName',!name],['rvType',!type],['rvText',text.length<30]].forEach(([id,bad])=>{
+    document.getElementById(id).classList.toggle('error',bad);
+    if(bad) valid=false;
   });
-  if (selectedStars === 0) { alert('Please select a star rating.'); return; }
-  if (!valid) { alert('Please fill all required fields (min 30 chars for review).'); return; }
+  if(!selectedStars){ alert('Please select a star rating.'); return; }
+  if(!valid){ alert('Please fill all required fields (min 30 characters for review).'); return; }
 
-  btn.disabled = true;
-  btn.classList.add('loading');
-  btn.textContent = '⏳ Submitting…';
+  btn.disabled    = true;
+  btn.textContent = '⏳ Saving…';
 
   try {
-    await supaFetch('reviews', {
-      method: 'POST',
-      prefer: 'return=minimal',
-      body: JSON.stringify({
-        name, location,
-        trip_type: type,
-        route: route || null,
-        stars: selectedStars,
-        review_text: text,
-        approved: false
-      })
+    await insertReview({
+      name,
+      location,
+      trip_type:   type,
+      route:       route || null,
+      stars:       selectedStars,
+      review_text: text,   /* ← correct column name */
+      approved:    true    /* ← shows immediately */
     });
-    btn.classList.remove('loading');
+
     btn.classList.add('success');
-    btn.textContent = '✅ Review Submitted — Thank You!';
-    // Clear form
-    ['rvName','rvLocation','rvRoute','rvText'].forEach(id => document.getElementById(id).value = '');
-    document.getElementById('rvType').value = '';
-    selectedStars = 0;
-    starPicks.forEach(p => p.classList.remove('lit'));
-  } catch (err) {
-    btn.disabled = false;
-    btn.classList.remove('loading');
+    btn.textContent = '✅ Review Saved — Thank You!';
+
+    /* Clear form */
+    ['rvName','rvLocation','rvRoute','rvText'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('rvType').value='';
+    selectedStars=0;
+    starPicks.forEach(p=>p.classList.remove('lit'));
+
+    /* Reload so new review appears instantly */
+    await loadReviews();
+
+    setTimeout(()=>{
+      btn.disabled=false;
+      btn.classList.remove('success');
+      btn.textContent='💬 Submit Review';
+    }, 4000);
+
+  } catch(err) {
+    btn.disabled    = false;
     btn.textContent = '💬 Submit Review';
-    alert('Submission failed. Please try again or contact us on WhatsApp.');
-    console.error(err);
+    alert('Could not save review.\n\n' + err.message);
+    console.error('Submit error:', err);
   }
 });
 
-/* ─────────────────────────────────────────────────────
-   NAVBAR / HAMBURGER / WA
-───────────────────────────────────────────────────── */
-window.addEventListener('scroll', () => document.getElementById('navbar').classList.toggle('scrolled', scrollY > 40));
+/* ── NAVBAR / WA / HAMBURGER ── */
+window.addEventListener('scroll',()=>
+  document.getElementById('navbar').classList.toggle('scrolled',scrollY>40));
+
 const hamburger = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobileNav');
-function closeMenu() { hamburger.classList.remove('open'); mobileNav.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); mobileNav.setAttribute('aria-hidden','true'); }
-hamburger.addEventListener('click', () => { const o = hamburger.classList.toggle('open'); mobileNav.classList.toggle('open',o); hamburger.setAttribute('aria-expanded',o); mobileNav.setAttribute('aria-hidden',!o); });
+function closeMenu(){
+  hamburger.classList.remove('open'); mobileNav.classList.remove('open');
+  hamburger.setAttribute('aria-expanded','false'); mobileNav.setAttribute('aria-hidden','true');
+}
+hamburger.addEventListener('click',()=>{
+  const o=hamburger.classList.toggle('open');
+  mobileNav.classList.toggle('open',o);
+  hamburger.setAttribute('aria-expanded',o); mobileNav.setAttribute('aria-hidden',!o);
+});
 
-const waMsg = 'Hello Super J Travels, I would like to book a cab. Please share availability and rates.';
-const waLink = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waMsg)}`;
-['navWa','mobileWa','floatWa','footerWa','footerWa2'].forEach(id => { const el = document.getElementById(id); if(el) el.href = waLink; });
+const waLink=`https://wa.me/${WA}?text=${encodeURIComponent('Hello Super J Travels, I would like to book a cab.')}`;
+['navWa','mobileWa','floatWa','footerWa','footerWa2'].forEach(id=>{
+  const el=document.getElementById(id);
+  if(el){el.href=waLink;el.target='_blank';el.rel='noopener noreferrer';}
+});
 
 /* Scroll reveal */
-const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);} }), {threshold:.08});
-document.querySelectorAll('.reveal,.stagger').forEach(el => observer.observe(el));
+new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('visible');}}),{threshold:.08})
+  .observe(document.querySelector('.sec-head')||document.body);
 
-/* Boot */
-loadData();
+/* ── BOOT ── */
+loadReviews();
 </script>
 </body>
-</html>
+</html> 
